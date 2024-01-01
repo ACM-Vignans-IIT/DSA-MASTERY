@@ -14,7 +14,7 @@ This repository covers the roadmap for mastering Data Structures and Algorithms 
 
 <!-- <p> <a href="#dsa-basic-to-advanced">• Strivers DSA Cheat Sheet</a> <br/> <a href="#dsa-basic-to-advanced">• Love Babar DSA Cheat Sheet</a> </p> -->
 
-## Data Structures and Algorithms Roadmap
+# Data Structures and Algorithms Roadmap
 
 ## 5 steps to Mastering DSA
 
