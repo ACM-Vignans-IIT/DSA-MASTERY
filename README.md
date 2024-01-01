@@ -16,7 +16,7 @@ This repository covers the roadmap for mastering Data Structures and Algorithms 
 
 ## Data Structures and Algorithms Roadmap
 
-### 5 steps to Mastering DSA
+## 5 steps to Mastering DSA
 
 Mastering DSA as a beginner is simplified into 5 steps:
 
@@ -34,13 +34,13 @@ Mastering DSA as a beginner is simplified into 5 steps:
 |  4.   | [**Practice consistently and extensively**](#4-practice-consistently-and-extensively)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |  5.   | [**Compete to advance and become proficient**](#5-compete-to-advance-and-become-proficient)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
-### 1. Master at least one Programming Language
+## 1. Master at least one Programming Language
 
 Embark on your data structures and algorithms journey by mastering a programming language. Just as we learn the alphabet and grammar before writing essays, understanding the basics of a language is essential for programming.
 
 Choose a language, whether it's Java, C, C++, Python, or any other of your preference. Before diving into coding, grasp the foundational elements of the language, including basic syntax, data types, variables, operators, conditional statements, loops, functions, etc. Optionally, explore Object-Oriented Programming (OOP) concepts to strengthen your coding foundation.
 
-### 2. Understand Complexities
+## 2. Understand Complexities
 
 Now, let's delve into an interesting and crucial topic. The main goal of using DSA is to solve problems effectively and efficiently. How do you assess if your program is efficient? This is where complexities come in, and there are two types:
 
@@ -60,11 +60,11 @@ It overlooks system-dependent constants and focuses solely on the number of modu
 2. **Omega Notation (Ω):** Specifies the best-case scenario.
 3. **Theta Notation (θ):** Represents the average complexity of an algorithm.
 
-### 3. Learn essential Data Structures and Algorithms
+## 3. Learn essential Data Structures and Algorithms
 
 ◌ <a href="#31-array">**3.1 - Array**</a><br>◌ <a href="#32-string">**3.2 - String**</a><br>◌ <a href="#33-linked-list">**3.3 - Linked List**</a><br>◌ <a href="#34-searching-algorithm">**3.4 - Searching Algorithm**</a><br>◌ <a href="#35-sorting-algorithm">**3.5 - Sorting Algorithm**</a><br>◌ <a href="#36-divide-and-conquer-algorithm">**3.6 - Divide and Conquer Algorithm**</a><br>◌ <a href="#37-stack">**3.7 - Stack**</a><br>◌ <a href="#38-queue">**3.8 - Queue**</a><br>◌ <a href="#39-tree-data-structure">**3.9 - Tree Data Structure**</a><br>◌ <a href="#310-graph-data-structure">**3.10 - Graph Data Structure**</a><br>◌ <a href="#311-greedy-methodology">**3.11 - Greedy Methodology**</a><br>◌ <a href="#312-recursion">**3.12 - Recursion**</a><br>◌ <a href="#313-backtracking-algorithm">**3.13 - Backtracking Algorithm**</a><br>◌ <a href="#314-dynamic-programming">**3.14 - Dynamic Programming**</a></p>
 
-### 3.1 Array
+## 3.1 Array
 
 The array is a fundamental and crucial data structure, presenting a linear arrangement of elements. It serves as a collection of homogeneous data types, with elements allocated contiguous memory. Thanks to this contiguous allocation, accessing any array element occurs in constant time. Each array element is identified by a corresponding index number.
 
@@ -82,7 +82,7 @@ Additional Array Topics to Explore
 - **Kadane’s algorithm**
 - **Dutch national flag algorithm**
 
-### 3.2 String
+## 3.2 String
 
 A string, essentially a type of array, can be seen as an array of characters. However, it possesses distinct features, such as the last character being a null character to signify the string's end. Unique operations, like concatenation merging two strings into one, further set strings apart.
 
@@ -97,7 +97,7 @@ Additional String Concepts to Explore
 - **Lexicographic Pattern:** A pattern based on ASCII values or in dictionary order.
 - **Pattern Searching:** Advanced topic involving searching for a given pattern within the string.
 
-### 3.3 Linked List
+## 3.3 Linked List
 
 Similar to the aforementioned data structures, a linked list is a linear data structure. However, unlike an array, a linked list doesn't have contiguous memory allocation. Instead, each node in the linked list is assigned to a random memory space, and the previous node maintains a pointer to this node. Direct memory access to any node is not possible, and the linked list is dynamic, allowing for size adjustments at any time. 
 
@@ -109,7 +109,7 @@ Linked List Variations to Explore
 - **Circular Linked List:** The last node points back to the head of the linked list.
 - **Doubly Linked List:** Each node holds two pointers—one pointing to the next node and the other to the previous node.
 
-### 3.4 Searching Algorithm
+## 3.4 Searching Algorithm
 
 Having explored linear data structures, it's time to delve into fundamental and widely used algorithms, starting with searching algorithms.
 Searching algorithms aim to locate a specific element in an array, string, linked list, or other data structures. Key searching algorithms include:
@@ -126,7 +126,7 @@ Other notable searching algorithms include:
 - Interpolation Search
 - Exponential Search
 
-### 3.5 Sorting Algorithm
+## 3.5 Sorting Algorithm
 
 Another crucial algorithm is the sorting algorithm, frequently employed when arranging data based on specific conditions becomes necessary. Sorting algorithms are utilized to rearrange a set of homogeneous data, such as sorting an array in increasing or decreasing order.
 
@@ -144,7 +144,7 @@ Widely Used Sorting Algorithms
 
 Numerous other sorting algorithms exist, each beneficial in different scenarios.
 
-### 3.6 Divide and Conquer Algorithm
+## 3.6 Divide and Conquer Algorithm
 
 An intriguing and significant algorithm to learn in your programming journey is the Divide and Conquer algorithm. True to its name, it breaks down a problem into parts, solves each subproblem, and then merges the solutions to address the original problem.
 
@@ -158,7 +158,7 @@ The algorithmic paradigm of Divide and Conquer involves three key steps:
 
 This technique is prominently featured in two sorting algorithms—Merge Sort and Quick Sort.
 
-### 3.7 Stack
+## 3.7 Stack
 
 Transitioning to more complex data structures, let's explore the Stack and Queue.
 
@@ -168,7 +168,7 @@ A Stack is a linear data structure that adheres to a specific order for its oper
 
 The complexity of the Stack as a data structure arises from its implementation, utilizing other data structures like Arrays, Linked lists, etc., chosen based on the characteristics and features specific to the Stack data structure.
 
-### 3.8 Queue
+## 3.8 Queue
 
 Similar to a Stack but with distinct characteristics, the Queue is another linear data structure.
 
@@ -182,7 +182,7 @@ Different types of queues include:
 - **Double-ended Queue (Deque):** Allows operations from both ends of the queue.
 - **Priority Queue:** Elements are arranged based on priority, with lower-priority elements dequeued after higher-priority ones.
 
-### 3.9 Tree Data Structure
+## 3.9 Tree Data Structure
 
 Having covered the basics of linear data structures, let's delve into non-linear structures, starting with the Tree.
 
@@ -203,7 +203,7 @@ Additional classifications based on node configuration include:
 - **Binary Search Tree:** A special binary tree where smaller nodes are on the left, and higher value nodes are on the right.
 - **Ternary Search Tree:** Similar to a binary search tree, but with nodes having at most 3 children.
 
-### 3.10 Graph Data Structure
+## 3.10 Graph Data Structure
 
 Moving on to another crucial non-linear structure, let's explore the Graph. Unlike the Tree, a Graph lacks a specific root or leaf node and allows traversal in any order.
 
@@ -219,7 +219,7 @@ Key concepts to explore:
 - **Topological Sorting in the Graph**
 - **Minimum Spanning Tree in Graph**
 
-### 3.11 Greedy Methodology
+## 3.11 Greedy Methodology
 
 As the name implies, the Greedy methodology constructs the solution incrementally, selecting the next piece that provides the most immediate benefit — the locally optimal choice leading to global solutions.
 
@@ -235,7 +235,7 @@ To delve into the Greedy algorithm, explore these sub-topics:
 - **Greedy Algorithms in Arrays**
 - **Approximate Greedy Algorithms for NP-complete Problems**
 
-### 3.12 Recursion
+## 3.12 Recursion
 
 Recursion stands out as a vital algorithm leveraging the concept of code reusability and repeated code usage. Its significance extends to being the foundation for many other algorithms, including:
 
@@ -253,7 +253,7 @@ To explore Recursion thoroughly, refer to the following articles/links:
 - [Tail Recursion](link)
 - [Towers of Hanoi (TOH)](link)
 
-### 3.13 Backtracking Algorithm
+## 3.13 Backtracking Algorithm
 
 Derived from Recursion, the Backtracking algorithm allows for retracing if a recursive solution fails, exploring alternative solutions. It systematically tries out all possible solutions to find the correct one.
 
@@ -271,7 +271,7 @@ Key problems to tackle in Backtracking algorithms:
 - **Hamiltonian Cycle**
 - **Sudoku**
 
-### 3.14 Dynamic Programming
+## 3.14 Dynamic Programming
 
 Dynamic Programming stands as a crucial algorithm, serving as an optimization over plain recursion. It becomes particularly valuable when a recursive solution involves repeated calls for the same inputs, allowing for optimization.
 
@@ -286,7 +286,7 @@ Key concepts to explore in Dynamic Programming:
 - **Bitmasking and Dynamic Programming**
 - **Digit DP**
 
-### 4. Practice Consistently and Extensively
+## 4. Practice Consistently and Extensively
 
 Having covered the basics of major data structures and algorithms, it's time to put your knowledge into practice.
 
@@ -294,7 +294,7 @@ Having covered the basics of major data structures and algorithms, it's time to 
 
 For learning DSA, consistent and extensive practice is key. Whether considered a separate step or an integral part of the learning process, dedicating time to solving problems and implementing algorithms is essential for mastery.
 
-### 5. Compete to Advance and Become Proficient
+## 5. Compete to Advance and Become Proficient
 
 Explore and enhance your coding skills on various practicing platforms. Compete, solve challenges, and advance your proficiency on platforms like:
 
