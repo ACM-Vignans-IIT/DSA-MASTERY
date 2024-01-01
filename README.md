@@ -3,18 +3,18 @@
 <!-- This repository covers a range of Data Structures and Algorithms (DSA) implementations, spanning from introductory to advanced levels. -->
 This repository covers the roadmap for mastering Data Structures and Algorithms in JavaScript, Python, C/C++, and Java.
 
-|       | &emsp;&emsp;&emsp;&emsp; **TABLE OF CONTENTS** &emsp;&emsp;&emsp;&emsp;                                                                                                                                                                                |
-| :---: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|   •   | [**DSA Roadmap**](#data-structures-and-algorithms-roadmap)                                                                                                                                                                                             |
-|   •   | [**JavaScript DSA**](#javascript---data-structures-and-algorithms)                                                                                                                                                                                     |
-|   •   | [**Python DSA**](#python---data-structures-and-algorithms)                                                                                                                                                                                             |
-|   •   | [**C/C++ DSA**](#cc---data-structures-and-algorithms)                                                                                                                                                                                                  |
-|   •   | [**Java DSA**](#java---data-structures-and-algorithms)                                                                                                                                                                                                 |
-|   •   | <details> <summary><a href="#dsa-practice-sheets"><b>DSA Practice Sheets</b></a></summary> <p> ◌ <a href="#dsa-basic-to-advanced">Strivers DSA Cheat Sheet</a> <br/> ◌ <a href="#dsa-basic-to-advanced">Love Babar DSA Cheat Sheet</a> </p> </details> |  |
+|       | &emsp;&emsp;&emsp;&emsp; **TABLE OF CONTENTS** &emsp;&emsp;&emsp;&emsp;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| :---: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   •   | [**DSA Roadmap**](#data-structures-and-algorithms-roadmap)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|   •   | [**JavaScript DSA**](#javascript---data-structures-and-algorithms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|   •   | [**Python DSA**](#python---data-structures-and-algorithms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|   •   | [**C/C++ DSA**](#cc---data-structures-and-algorithms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|   •   | [**Java DSA**](#java---data-structures-and-algorithms)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|   •   | <details> <summary><a href="#dsa-practice-sheets"><b>DSA Practice Sheets</b></a></summary> <p> ◌ <a href="#1-strivers-sde-sheet--top-coding-interview-problems">Strivers DSA Cheat Sheet</a> <br/> ◌ <a href="#2-dsa-sheet-by-love-babbar">Love Babar DSA Cheat Sheet</a>  <br/> ◌ <a href="#3-apna-college-dsa-sheet">Apna College DSA Cheat Sheet</a>  <br/> ◌ <a href="#4-neetcode-150">NeetCode 150 DSA Cheat Sheet</a>  <br/> ◌ <a href="#5-dsa-sheet-by-arsh-45–60-days-plan">DSA Sheet by Arsh (45–60 Days Plan)</a>  <br/> ◌ <a href="#6-algopreps-151-problems-sheet">AlgoPrep’s 151 Problems Sheet</a> </p> </details> |  |
 
 <!-- <p> <a href="#dsa-basic-to-advanced">• Strivers DSA Cheat Sheet</a> <br/> <a href="#dsa-basic-to-advanced">• Love Babar DSA Cheat Sheet</a> </p> -->
 
-# Data Structures and Algorithms Roadmap
+## Data Structures and Algorithms Roadmap
 
 ## 5 steps to Mastering DSA
 
@@ -325,32 +325,32 @@ Remember, learning DSA is a continuous process, and persistence and problem-solv
 
 ## DSA Practice Sheets
 
-1. **Striver’s SDE Sheet — Top Coding Interview Problems**
+### 1. **Striver’s SDE Sheet — Top Coding Interview Problems**
    - [Website Link](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
    - Creator: Raj Vikramaditya (Striver)
    - A compilation of essential coding interview questions in Data Structures & Algorithms. Commonly asked in interviews at prominent companies like Google, Amazon, and Facebook.
 
-2. **DSA Sheet by Love Babbar**
+### 2. **DSA Sheet by Love Babbar**
    - [Website Link](https://www.geeksforgeeks.org/dsa-sheet-by-love-babbar/)
    - Creator: Love Babbar
    - A comprehensive list of 450 coding questions by a former Amazon Software Engineer. These questions help in understanding Data Structures & Algorithms and are frequently asked in interviews at companies like Amazon, Microsoft, and Google.
 
-3. **Apna College DSA Sheet**
+### 3. **Apna College DSA Sheet**
    - [Google Sheet Link](https://docs.google.com/spreadsheets/d/1hXserPuxVoWMG9Hs7y8wVdRCJTcj3xMBAEYUOXQ5Xag)
    - Creators: Shradha Didi and Aman Bhaiya
    - A valuable resource with around 400 problems categorized by topic, along with information about companies that have posed these problems.
 
-4. **NeetCode 150**
+### 4. **NeetCode 150**
    - [Website Link](https://neetcode.io/practice)
    - Curated by a Google engineer
    - A collection of 150 LeetCode.com questions covering important topics for interviews at FAANG and other big tech companies.
 
-5. **DSA Sheet by Arsh (45–60 Days Plan)**
+### 5. **DSA Sheet by Arsh (45–60 Days Plan)**
    - [Google Sheet Link](https://docs.google.com/spreadsheets/d/1MGVBJ8HkRbCnU6EQASjJKCqQE8BWng4qgL0n3vCVOxE)
    - Creator: Arsh Goyal
    - A DSA plan with coding problems designed to prepare for interviews in 45–60 days. Arsh has a background in Samsung, CodeChef, and ISRO.
 
-6. **AlgoPrep’s 151 Problems Sheet**
+### 6. **AlgoPrep’s 151 Problems Sheet**
    - [Google Sheet Link](https://docs.google.com/spreadsheets/d/1kyHfGGaLTzWspcqMUUS5Httmip7t8LJB0P-uPrRLGos)
    - Compiled by Nishant Bhaiya from AlgoPrep
    - A broad range of coding problems and solutions related to data structures and algorithms, aimed at assisting software development engineers in interview preparation for top tech firms.
