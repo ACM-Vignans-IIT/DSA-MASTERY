@@ -367,3 +367,9 @@ Stay tuned for additional resources and guides tailored for specific programming
 ## C/C++ - Data Structures and Algorithms
 
 ## Java - Data Structures and Algorithms
+
+<hr>
+
+<p align="center">
+  Copyright © 2023 - 2024 <b><a href="https://github.com/SERVER-X-101">SERVER-X-101</a></b> All rights reserved. <br/>
+</p>
