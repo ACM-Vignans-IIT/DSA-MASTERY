@@ -1180,7 +1180,7 @@ Key concepts to explore in Dynamic Programming:
 - Crucial for mastering Data Structures and Algorithms.
 
 <details open>
-  <summary><b>Resources: Adv Dynamic Programming</b></summary>
+  <summary><b>Resources: Mathematics</b></summary>
   <table>
   <tbody>
     <tr>
@@ -1230,7 +1230,7 @@ Key concepts to explore in Dynamic Programming:
 </details>
 
 <details open>
-  <summary><b>Practice Problems: Adv Dynamic Programming</b></summary>
+  <summary><b>Practice Problems: Mathematics</b></summary>
   <table>
   <tbody>
    <tr>
