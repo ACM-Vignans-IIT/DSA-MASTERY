@@ -453,7 +453,7 @@ This technique is prominently featured in two sorting algorithms—Merge Sort an
     </tr>
     <tr>
       <td><p>◌ <b>Leetcode: Interview Practice</b></p></td>
-      <td><a target="_blank" href="https://leetcode.com/tag/stack/"><b>Leetcode: Practice Stacks</b></a></td>
+      <td><a target="_blank" href="https://leetcode.com/tag/divide-and-conquer/"><b>Leetcode: Practice Stacks</b></a></td>
     </tr>
   </tbody>
 </table>
