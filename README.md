@@ -42,6 +42,8 @@ Mastering DSA as a beginner is simplified into 5 steps:
 4. Practice a lot.
 5. Join competitions to get really good.
 
+## Index
+
 | Steps | Table of Contents                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | :---: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |  1.   | [**Master at least one Programming Language**](#1-master-at-least-one-programming-language)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -87,7 +89,7 @@ It overlooks system-dependent constants and focuses solely on the number of modu
 
 <details open><summary><b>Practice: Time and Space Complexity</b></summary><table><tbody><tr><td><p>◌ <b>MCQs: Time and Space Complexity</b></p></td><td><a target="_blank" href="https://discuss.codechef.com/t/multiple-choice-questions-related-about-time-and-space-complexity-of-a-program/17976"><b>CodeChef</b></a></td></tr><tr><td><p>◌ <b>Particularly for Big-O notation</b></p></td><td><a target="_blank" href="https://www.youtube.com/watch?v=v4cd1O4zkGw"><b>YouTube</b></a></td></tr><tr><td><p>◌ <b>Practice Problems</b></p></td><td><a target="_blank" href="https://www.iitk.ac.in/esc101/08Jul/lecnotes/practise_sol.pdf"><b>IITK Lecture Practice</b></a></td></tr></tbody></table></details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3. Learn essential Data Structures and Algorithms
 
@@ -374,7 +376,7 @@ The complexity of the Stack as a data structure arises from its implementation, 
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.5 Queue
 
@@ -446,7 +448,7 @@ Different types of queues include:
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.6 Searching Algorithm
 
@@ -505,7 +507,7 @@ Other notable searching algorithms include:
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.7 Sorting Algorithm
 
@@ -577,7 +579,7 @@ Numerous other sorting algorithms exist, each beneficial in different scenarios.
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.8 Divide and Conquer Algorithm
 
@@ -645,7 +647,7 @@ This technique is prominently featured in two sorting algorithms—Merge Sort an
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.9 Linked List
 
@@ -683,7 +685,7 @@ Linked List Variations to Explore
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.10 Tree Data Structure
 
@@ -775,7 +777,7 @@ Additional classifications based on node configuration include:
 </details>
 
 <details open>
-  <summary><b>Practice Problems: Queues</b></summary>
+  <summary><b>Practice Problems: Trees</b></summary>
   <table>
   <tbody>
     <tr>
@@ -809,7 +811,7 @@ Additional classifications based on node configuration include:
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.11 Graph Data Structure
 
@@ -951,7 +953,7 @@ Key concepts to explore:
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.12 Recursion
 
@@ -1075,7 +1077,7 @@ Key problems to tackle in Backtracking algorithms:
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.14 Dynamic Programming
 
@@ -1210,7 +1212,7 @@ Key concepts to explore in Dynamic Programming:
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.15 Greedy Methodology
 
@@ -1276,7 +1278,7 @@ To delve into the Greedy algorithm, explore these sub-topics:
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 3.16 Mathematics Advanced
 
@@ -1314,7 +1316,7 @@ To delve into the Greedy algorithm, explore these sub-topics:
 </table>
 </details>
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ## 4. Practice Consistently and Extensively
 
@@ -1392,7 +1394,7 @@ Remember, learning DSA is a continuous process, and persistence and problem-solv
 - Compiled by Nishant Bhaiya from AlgoPrep
 - A broad range of coding problems and solutions related to data structures and algorithms, aimed at assisting software development engineers in interview preparation for top tech firms.
 
-[**Back To Top &#x2934;**](#dsa-mastery)
+[**Back To Top &#x2934;**](#index)
 
 ---
 
