@@ -374,6 +374,8 @@ The complexity of the Stack as a data structure arises from its implementation, 
 </table>
 </details>
 
+[**Back To Top &#x2934;**](#dsa-mastery)
+
 ## 3.5 Queue
 
 Similar to a Stack but with distinct characteristics, the Queue is another linear data structure.
@@ -503,6 +505,8 @@ Other notable searching algorithms include:
 </table>
 </details>
 
+[**Back To Top &#x2934;**](#dsa-mastery)
+
 ## 3.7 Sorting Algorithm
 
 Another crucial algorithm is the sorting algorithm, frequently employed when arranging data based on specific conditions becomes necessary. Sorting algorithms are utilized to rearrange a set of homogeneous data, such as sorting an array in increasing or decreasing order.
@@ -573,6 +577,8 @@ Numerous other sorting algorithms exist, each beneficial in different scenarios.
 </table>
 </details>
 
+[**Back To Top &#x2934;**](#dsa-mastery)
+
 ## 3.8 Divide and Conquer Algorithm
 
 An intriguing and significant algorithm to learn in your programming journey is the Divide and Conquer algorithm. True to its name, it breaks down a problem into parts, solves each subproblem, and then merges the solutions to address the original problem.
@@ -639,6 +645,8 @@ This technique is prominently featured in two sorting algorithms—Merge Sort an
 </table>
 </details>
 
+[**Back To Top &#x2934;**](#dsa-mastery)
+
 ## 3.9 Linked List
 
 Similar to the aforementioned data structures, a linked list is a linear data structure. However, unlike an array, a linked list doesn't have contiguous memory allocation. Instead, each node in the linked list is assigned to a random memory space, and the previous node maintains a pointer to this node. Direct memory access to any node is not possible, and the linked list is dynamic, allowing for size adjustments at any time.
@@ -674,6 +682,8 @@ Linked List Variations to Explore
   </tbody>
 </table>
 </details>
+
+[**Back To Top &#x2934;**](#dsa-mastery)
 
 ## 3.10 Tree Data Structure
 
@@ -798,6 +808,8 @@ Additional classifications based on node configuration include:
   </tbody>
 </table>
 </details>
+
+[**Back To Top &#x2934;**](#dsa-mastery)
 
 ## 3.11 Graph Data Structure
 
@@ -1198,6 +1210,8 @@ Key concepts to explore in Dynamic Programming:
 </table>
 </details>
 
+[**Back To Top &#x2934;**](#dsa-mastery)
+
 ## 3.15 Greedy Methodology
 
 As the name implies, the Greedy methodology constructs the solution incrementally, selecting the next piece that provides the most immediate benefit — the locally optimal choice leading to global solutions.
@@ -1262,6 +1276,8 @@ To delve into the Greedy algorithm, explore these sub-topics:
 </table>
 </details>
 
+[**Back To Top &#x2934;**](#dsa-mastery)
+
 ## 3.16 Mathematics Advanced
 
 ### Advance Mathematics in DSA
@@ -1307,6 +1323,7 @@ Having covered the basics of major data structures and algorithms, it's time to 
 >"Practice makes a man perfect."
 
 For learning DSA, consistent and extensive practice is key. Whether considered a separate step or an integral part of the learning process, dedicating time to solving problems and implementing algorithms is essential for mastery.
+
 
 ## 5. Compete to Advance and Become Proficient
 
