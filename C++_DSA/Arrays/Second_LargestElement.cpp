@@ -1,19 +1,21 @@
 /*
-A Program to find the largest element of a given array
+A program to find the second largest element in the given array
 Time Complexity : O(n)
 */
 
 #include<bits/stdc++.h>
 using namespace std;
 
-int largestElement(int arr[],int n){
+int secondLargestElement(int arr[],int n){
+    int second_max=-1;
     int max=arr[0];
-    for(int i=1;i<n;i++){
-        if(max<arr[i]){
+    for(int i=0;i<n;i++){
+        if(arr[i]>max){
+            second_max=max;
             max=arr[i];
         }
     }
-    return max;
+    return second_max;
 }
 
 int main(){
@@ -25,7 +27,7 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    cout<<"largest Number in the given Array is "<<largestElement(arr,n);
+    cout<<"Second largest Number in the given Array is "<<secondLargestElement(arr,n);
     cout<<endl;
 }
 
@@ -34,6 +36,6 @@ output:
 Enter the number of Elements
 8
 Enter array elements
-23 65 43 78 12 23 90 78
-largest Number in the given Array is 90
+12 32 54 45 7 67 89 89
+Second largest Number in the given Array is 67
 */
