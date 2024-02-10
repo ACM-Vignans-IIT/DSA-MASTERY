@@ -14,6 +14,7 @@ int secondLargestElement(int arr[],int n){
             second_max=max;
             max=arr[i];
         }
+        else if(arr[i]>second_max && arr[i]!=max)second_max=arr[i];
     }
     return second_max;
 }
