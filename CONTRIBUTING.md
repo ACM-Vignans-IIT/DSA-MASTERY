@@ -26,25 +26,25 @@ Thank you for considering contributing to this repository! Here are some ways yo
 
 ## For Data Structures Code Folders
 Example:
-  * JavaScript-DSA (folder)
-    * 01-Introduction (folder)
-    * 02-Data-Structures (folder)
-      * Linked-List (folder)
-        * Operations (folder)
-          * Singly-Linked-List (folder)
-            - insertion.js or insertion.md (file)
-            - deletion.js or deletion.md (file)
+  * JavaScript-DSA `(folder)`
+    * 01-Introduction `(folder)`
+    * 02-Data-Structures `(folder)`
+      * Linked-List `(folder)`
+        * Operations `(folder)`
+          * Singly-Linked-List `(folder)`
+            - insertion.js or insertion.md `(file)`
+            - deletion.js or deletion.md `(file)`
           * Doubly-Linked-List
-            - insertion.js or insertion.md (file)
-            - deletion.js or deletion.md (file)
+            - insertion.js or insertion.md `(file)`
+            - deletion.js or deletion.md `(file)`
 
 ## For Algorithms Code Folders
 Example:
   * 03-Algorithms
-    * Greedy Method (folder)
-      * Fractional-Knapsack-Problem.cpp (file) 
-    * Recursion (folder)
-    * Divide and Conquer (folder)
+    * Greedy Method `(folder)`
+      * Fractional-Knapsack-Problem.cpp `(file)` 
+    * Recursion `(folder)`
+    * Divide and Conquer `(folder)`
 
 Thanks! :heart: :heart: :heart:
 
