@@ -1404,7 +1404,7 @@ Stay tuned for additional resources and guides tailored for specific programming
 
 ### JavaScript - Data Structures and Algorithms
 
-Introduction: [Learn DSA in JavaScript](./JavaScript/README.md)
+**Introduction**: [*Learn DSA in JavaScript*](./JavaScript/README.md)
 
 ### Python - Data Structures and Algorithms
 
