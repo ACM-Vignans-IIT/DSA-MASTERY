@@ -12,11 +12,9 @@
 
 </br>
 
-<div align="cneter">
+> [!TIP]
+> **DSA Mastery in 9 Weeks: Read, Solve, Code!**
 
-> DSA Mastery in 9 Weeks: Read, Solve, Code!
-
-</div>
 
 <!-- This repository covers a range of Data Structures and Algorithms (DSA) implementations, spanning from introductory to advanced levels. -->
 This repository covers the roadmap for mastering Data Structures and Algorithms in JavaScript, Python, C/C++, and Java.
