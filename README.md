@@ -1394,6 +1394,8 @@ Remember, learning DSA is a continuous process, and persistence and problem-solv
 
 [**Back To Top &#x2934;**](#index)
 
+<!--
+
 ---
 
 ## Upcoming Additions
@@ -1409,6 +1411,8 @@ Stay tuned for additional resources and guides tailored for specific programming
 ### C/C++ - Data Structures and Algorithms
 
 ### Java - Data Structures and Algorithms
+
+-->
 
 <div align="center">
 
