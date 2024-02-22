@@ -1412,9 +1412,9 @@ Stay tuned for additional resources and guides tailored for specific programming
 
 ### Java - Data Structures and Algorithms
 
-<div align="center">
-
 -->
+
+<div align="center">
 
 ---
 
