@@ -1394,8 +1394,6 @@ Remember, learning DSA is a continuous process, and persistence and problem-solv
 
 [**Back To Top 🡅**](#index)
 
-<!--
-
 ---
 
 ## Upcoming Additions
@@ -1406,13 +1404,13 @@ Stay tuned for additional resources and guides tailored for specific programming
 
 **Introduction**: [*Learn DSA in JavaScript*](./JavaScript/README.md)
 
-### Python - Data Structures and Algorithms
-
 ### C/C++ - Data Structures and Algorithms
 
-### Java - Data Structures and Algorithms
+**Introduction**: [*Learn DSA in C++*](./C++/README.md)
 
--->
+### Python - Data Structures and Algorithms
+
+### Java - Data Structures and Algorithms
 
 <div align="center">
 
