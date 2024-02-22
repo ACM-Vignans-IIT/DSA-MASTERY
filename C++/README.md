@@ -16,6 +16,10 @@ C++ emerges as a go-to language for crafting high-performance applications, oper
 
 **Algorithms**: Complementing data structures are algorithms, the strategic blueprints for solving computational problems. Whether it's searching, sorting, or traversing data, algorithms optimize operations, enhancing program execution speed and efficiency.
 
+#### Data Structures Concepts: 
+• [**Arrays in C++**](./01%20-%20Arrays/Beginner/)
+
+
 ### Importance of Data Structures and Algorithms
 
 The significance of DSA transcends theoretical realms, manifesting profoundly in real-world problem-solving. By leveraging DSA effectively, programmers can expedite program execution, minimize runtime complexities, and optimize resource utilization.
