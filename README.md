@@ -374,7 +374,7 @@ The complexity of the Stack as a data structure arises from its implementation, 
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.5 Queue
 
@@ -446,7 +446,7 @@ Different types of queues include:
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.6 Searching Algorithm
 
@@ -505,7 +505,7 @@ Other notable searching algorithms include:
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.7 Sorting Algorithm
 
@@ -577,7 +577,7 @@ Numerous other sorting algorithms exist, each beneficial in different scenarios.
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.8 Divide and Conquer Algorithm
 
@@ -645,7 +645,7 @@ This technique is prominently featured in two sorting algorithms—Merge Sort an
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.9 Linked List
 
@@ -683,7 +683,7 @@ Linked List Variations to Explore
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.10 Tree Data Structure
 
@@ -809,7 +809,7 @@ Additional classifications based on node configuration include:
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.11 Graph Data Structure
 
@@ -951,7 +951,7 @@ Key concepts to explore:
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.12 Recursion
 
@@ -1075,7 +1075,7 @@ Key problems to tackle in Backtracking algorithms:
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.14 Dynamic Programming
 
@@ -1210,7 +1210,7 @@ Key concepts to explore in Dynamic Programming:
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.15 Greedy Methodology
 
@@ -1276,7 +1276,7 @@ To delve into the Greedy algorithm, explore these sub-topics:
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3.16 Mathematics Advanced
 
@@ -1314,7 +1314,7 @@ To delve into the Greedy algorithm, explore these sub-topics:
 </table>
 </details>
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 4. Practice Consistently and Extensively
 
@@ -1392,7 +1392,7 @@ Remember, learning DSA is a continuous process, and persistence and problem-solv
 - Compiled by Nishant Bhaiya from AlgoPrep
 - A broad range of coding problems and solutions related to data structures and algorithms, aimed at assisting software development engineers in interview preparation for top tech firms.
 
-[**Back To Top 🡅**](#index)
+[**Back To Top ⬆️**](#index)
 
 ---
 
