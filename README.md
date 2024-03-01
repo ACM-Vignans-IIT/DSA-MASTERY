@@ -87,7 +87,7 @@ It overlooks system-dependent constants and focuses solely on the number of modu
 
 <details open><summary><b>Practice: Time and Space Complexity</b></summary><table><tbody><tr><td><p>◌ <b>MCQs: Time and Space Complexity</b></p></td><td><a target="_blank" href="https://discuss.codechef.com/t/multiple-choice-questions-related-about-time-and-space-complexity-of-a-program/17976"><b>CodeChef</b></a></td></tr><tr><td><p>◌ <b>Particularly for Big-O notation</b></p></td><td><a target="_blank" href="https://www.youtube.com/watch?v=v4cd1O4zkGw"><b>YouTube</b></a></td></tr><tr><td><p>◌ <b>Practice Problems</b></p></td><td><a target="_blank" href="https://www.iitk.ac.in/esc101/08Jul/lecnotes/practise_sol.pdf"><b>IITK Lecture Practice</b></a></td></tr></tbody></table></details>
 
-[**Back To Top 🔝**](#index)
+[**Back To Top ⬆️**](#index)
 
 ## 3. Learn essential Data Structures and Algorithms
 
