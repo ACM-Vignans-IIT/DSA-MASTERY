@@ -1,5 +1,5 @@
 ---
-title: 'Article on DSA Topic:' Arrays
+title: 'Article on DSA Topic: Arrays'
 description: In this article, we delve into Arrays in the context of Data Structures and Algorithms (DSA).
 date: 2024-05-20
 author: Nehal Fathema
