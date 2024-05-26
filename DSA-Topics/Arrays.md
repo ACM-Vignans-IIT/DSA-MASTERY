@@ -39,6 +39,7 @@ Arrays are essential for several reasons:
 ## Basic Operations on Arrays
 
 ### Initialization and Access
+#### C++
 ```cpp
 #include <iostream>
 
@@ -55,7 +56,30 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Declaration and Initialization
+        int[] arr = {1, 2, 3, 4, 5};
+
+        // Accessing Elements
+        System.out.println("Element at index 0: " + arr[0]);
+        System.out.println("Element at index 2: " + arr[2]);
+    }
+}
+```
+#### Python
+```python
+# Declaration and Initialization
+arr = [1, 2, 3, 4, 5]
+
+# Accessing Elements
+print("Element at index 0:", arr[0])
+print("Element at index 2:", arr[2])
+```
 ### Traversing and Modifying Elements
+#### C++
 ```cpp
 #include <iostream>
 
@@ -82,7 +106,43 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+
+        // Traversing and Modifying Elements
+        System.out.print("Array before modification: ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        arr[2] = 10; // Modify element at index 2
+
+        System.out.print("Array after modification: ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+# Declaration and Initialization
+arr = [1, 2, 3, 4, 5]
+
+# Traversing and Modifying Elements
+print("Array before modification:", ' '.join(map(str, arr)))
+
+arr[2] = 10  # Modify element at index 2
+
+print("Array after modification:", ' '.join(map(str, arr)))
+```
 ### Insertion and Deletion
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -111,7 +171,52 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        arr.add(4);
+        arr.add(5);
+
+        // Insertion
+        arr.add(2, 10); // Insert 10 at index 2
+        System.out.print("Array after insertion: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+
+        // Deletion
+        arr.remove(2); // Remove element at index 2
+        System.out.print("Array after deletion: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+# Declaration and Initialization
+arr = [1, 2, 3, 4, 5]
+
+# Insertion
+arr.insert(2, 10)  # Insert 10 at index 2
+print("Array after insertion:", ' '.join(map(str, arr)))
+
+# Deletion
+del arr[2]  # Remove element at index 2
+print("Array after deletion:", ' '.join(map(str, arr)))
+```
 ### Searching
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -141,7 +246,58 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static int linearSearch(ArrayList<Integer> arr, int x) {
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        arr.add(4);
+        arr.add(5);
+        int x = 3;
+
+        int index = linearSearch(arr, x);
+        if (index != -1) {
+            System.out.println("Element " + x + " found at index " + index);
+        } else {
+            System.out.println("Element " + x + " not found in the array");
+        }
+    }
+}
+```
+#### Python
+```python
+def linear_search(arr, x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+# Declaration and Initialization
+arr = [1, 2, 3, 4, 5]
+x = 3
+
+index = linear_search(arr, x)
+if index != -1:
+    print(f"Element {x} found at index {index}")
+else:
+    print(f"Element {x} not found in the array")
+```
 ### Sorting
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -163,6 +319,41 @@ int main() {
 
     return 0;
 }
+```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(5);
+        arr.add(2);
+        arr.add(3);
+        arr.add(1);
+        arr.add(4);
+
+        // Sorting the array
+        Collections.sort(arr);
+
+        System.out.print("Array after sorting: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+# Declaration and Initialization
+arr = [5, 2, 3, 1, 4]
+
+# Sorting the array
+arr.sort()
+
+print("Array after sorting:", ' '.join(map(str, arr)))
 ```
 ### Reversing
 ```cpp
@@ -187,7 +378,43 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        arr.add(4);
+        arr.add(5);
+
+        // Reversing the array
+        Collections.reverse(arr);
+
+        System.out.print("Array after reversing: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+# Declaration and Initialization
+arr = [1, 2, 3, 4, 5]
+
+# Reversing the array
+arr.reverse()
+
+print("Array after reversing:", ' '.join(map(str, arr)))
+```
 ### Search, Insert, Delete in a Sorted Array
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -244,7 +471,101 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    // Binary Search for a sorted array
+    public static int binarySearch(ArrayList<Integer> arr, int x) {
+        int left = 0, right = arr.size() - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr.get(mid) == x) return mid;
+            if (arr.get(mid) < x) left = mid + 1;
+            else right = mid - 1;
+        }
+        return -1;
+    }
+
+    // Insertion in a sorted array
+    public static void sortedInsert(ArrayList<Integer> arr, int x) {
+        arr.add(x);
+        Collections.sort(arr);
+    }
+
+    // Deletion in a sorted array
+    public static void sortedDelete(ArrayList<Integer> arr, int x) {
+        int index = binarySearch(arr, x);
+        if (index != -1) {
+            arr.remove(index);
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(4);
+        arr.add(5);
+        int x = 3;
+
+        // Insert
+        sortedInsert(arr, x);
+        System.out.print("Array after insertion: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+
+        // Delete
+        sortedDelete(arr, x);
+        System.out.print("Array after deletion: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def binary_search(arr, x):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = left + (right - left) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+def sorted_insert(arr, x):
+    arr.append(x)
+    arr.sort()
+
+def sorted_delete(arr, x):
+    index = binary_search(arr, x)
+    if index != -1:
+        arr.pop(index)
+
+# Declaration and Initialization
+arr = [1, 2, 4, 5]
+x = 3
+
+# Insert
+sorted_insert(arr, x)
+print("Array after insertion:", ' '.join(map(str, arr)))
+
+# Delete
+sorted_delete(arr, x)
+print("Array after deletion:", ' '.join(map(str, arr)))
+```
 ### Search, Insert, Delete in an Unsorted Array
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -295,7 +616,90 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+
+public class Main {
+    // Linear Search for an unsorted array
+    public static int linearSearch(ArrayList<Integer> arr, int x) {
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) == x) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    // Insertion in an unsorted array
+    public static void unsortedInsert(ArrayList<Integer> arr, int x) {
+        arr.add(x);
+    }
+
+    // Deletion in an unsorted array
+    public static void unsortedDelete(ArrayList<Integer> arr, int x) {
+        int index = linearSearch(arr, x);
+        if (index != -1) {
+            arr.remove(index);
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(4);
+        arr.add(2);
+        arr.add(1);
+        arr.add(5);
+        int x = 3;
+
+        // Insert
+        unsortedInsert(arr, x);
+        System.out.print("Array after insertion: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+
+        // Delete
+        unsortedDelete(arr, x);
+        System.out.print("Array after deletion: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def linear_search(arr, x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+def unsorted_insert(arr, x):
+    arr.append(x)
+
+def unsorted_delete(arr, x):
+    index = linear_search(arr, x)
+    if index != -1:
+        arr.pop(index)
+
+# Declaration and Initialization
+arr = [4, 2, 1, 5]
+x = 3
+
+# Insert
+unsorted_insert(arr, x)
+print("Array after insertion:", ' '.join(map(str, arr)))
+
+# Delete
+unsorted_delete(arr, x)
+print("Array after deletion:", ' '.join(map(str, arr)))
+```
 ### Generating all sub arrays
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -326,6 +730,59 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void printSubarrays(ArrayList<Integer> arr) {
+        int n = arr.size();
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                System.out.print("[");
+                for (int k = i; k <= j; k++) {
+                    System.out.print(arr.get(k));
+                    if (k < j) {
+                        System.out.print(", ");
+                    }
+                }
+                System.out.print("] ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+
+        System.out.println("All subarrays: ");
+        printSubarrays(arr);
+    }
+}
+```
+#### Python
+```python
+def print_subarrays(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(i, n):
+            print("[", end="")
+            for k in range(i, j + 1):
+                print(arr[k], end="")
+                if k < j:
+                    print(", ", end="")
+            print("] ", end="")
+        print()
+
+# Declaration and Initialization
+arr = [1, 2, 3]
+
+print("All subarrays: ")
+print_subarrays(arr)
+```
 # Rotation of Array
 
 ## What is Array Rotation?
@@ -354,7 +811,7 @@ Consider an array `[1, 2, 3, 4, 5]` and we want to left rotate it by 2 positions
 2. Shift the remaining elements of the original array to the left.
 3. Copy the temporary array elements to the end of the original array.
 
-### C++ Code for Left Rotation
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -389,6 +846,60 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void leftRotate(ArrayList<Integer> arr, int d) {
+        int n = arr.size();
+        ArrayList<Integer> temp = new ArrayList<>(arr.subList(0, d));
+
+        for (int i = 0; i < n - d; i++) {
+            arr.set(i, arr.get(i + d));
+        }
+
+        for (int i = 0; i < d; i++) {
+            arr.set(n - d + i, temp.get(i));
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        Collections.addAll(arr, 1, 2, 3, 4, 5);
+        int d = 2;
+
+        leftRotate(arr, d);
+
+        System.out.print("Array after left rotation: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def left_rotate(arr, d):
+    n = len(arr)
+    temp = arr[:d]
+
+    for i in range(n - d):
+        arr[i] = arr[i + d]
+
+    for i in range(d):
+        arr[n - d + i] = temp[i]
+
+# Declaration and Initialization
+arr = [1, 2, 3, 4, 5]
+d = 2
+
+left_rotate(arr, d)
+
+print("Array after left rotation:", ' '.join(map(str, arr)))
+```
 ## Right Rotation
 In right rotation, each element of the array is shifted to its right by a specified number of positions. The elements that fall off the end of the array are wrapped around to the beginning.
 
@@ -400,7 +911,7 @@ Consider an array `[1, 2, 3, 4, 5]` and we want to right rotate it by 2 position
 2. Shift the remaining elements of the original array to the right.
 3. Copy the temporary array elements to the beginning of the original array.
 
-### C++ Code for Right Rotation
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -435,6 +946,60 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void rightRotate(ArrayList<Integer> arr, int d) {
+        int n = arr.size();
+        ArrayList<Integer> temp = new ArrayList<>(arr.subList(n - d, n));
+
+        for (int i = n - 1; i >= d; i--) {
+            arr.set(i, arr.get(i - d));
+        }
+
+        for (int i = 0; i < d; i++) {
+            arr.set(i, temp.get(i));
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        Collections.addAll(arr, 1, 2, 3, 4, 5);
+        int d = 2;
+
+        rightRotate(arr, d);
+
+        System.out.print("Array after right rotation: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def right_rotate(arr, d):
+    n = len(arr)
+    temp = arr[-d:]
+
+    for i in range(n - 1, d - 1, -1):
+        arr[i] = arr[i - d]
+
+    for i in range(d):
+        arr[i] = temp[i]
+
+# Declaration and Initialization
+arr = [1, 2, 3, 4, 5]
+d = 2
+
+right_rotate(arr, d)
+
+print("Array after right rotation:", ' '.join(map(str, arr)))
+```
 
 # Rearranging an Array
 
@@ -464,7 +1029,7 @@ Consider an array `[1, 2, -3, -4, 5, -6, 7, -8]`. The rearranged array could be 
 1. Separate positive and negative numbers.
 2. Merge them by placing one positive and one negative element alternatively.
 
-### C++ Code
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -515,6 +1080,109 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void rearrange(ArrayList<Integer> arr) {
+        int n = arr.size();
+        ArrayList<Integer> pos = new ArrayList<>();
+        ArrayList<Integer> neg = new ArrayList<>();
+
+        // Separate positive and negative numbers
+        for (int i = 0; i < n; i++) {
+            if (arr.get(i) >= 0) {
+                pos.add(arr.get(i));
+            } else {
+                neg.add(arr.get(i));
+            }
+        }
+
+        int posIndex = 0, negIndex = 0, index = 0;
+
+        // Place positive and negative numbers alternately
+        while (posIndex < pos.size() && negIndex < neg.size()) {
+            arr.set(index++, pos.get(posIndex++));
+            arr.set(index++, neg.get(negIndex++));
+        }
+
+        // Copy remaining positive numbers, if any
+        while (posIndex < pos.size()) {
+            arr.set(index++, pos.get(posIndex++));
+        }
+
+        // Copy remaining negative numbers, if any
+        while (negIndex < neg.size()) {
+            arr.set(index++, neg.get(negIndex++));
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(-3);
+        arr.add(-4);
+        arr.add(5);
+        arr.add(-6);
+        arr.add(7);
+        arr.add(-8);
+
+        rearrange(arr);
+
+        System.out.print("Array after rearrangement: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def rearrange(arr):
+    n = len(arr)
+    pos = []
+    neg = []
+
+    # Separate positive and negative numbers
+    for i in range(n):
+        if arr[i] >= 0:
+            pos.append(arr[i])
+        else:
+            neg.append(arr[i])
+
+    pos_index, neg_index, index = 0, 0, 0
+
+    # Place positive and negative numbers alternately
+    while pos_index < len(pos) and neg_index < len(neg):
+        arr[index] = pos[pos_index]
+        index += 1
+        pos_index += 1
+        arr[index] = neg[neg_index]
+        index += 1
+        neg_index += 1
+
+    # Copy remaining positive numbers, if any
+    while pos_index < len(pos):
+        arr[index] = pos[pos_index]
+        index += 1
+        pos_index += 1
+
+    # Copy remaining negative numbers, if any
+    while neg_index < len(neg):
+        arr[index] = neg[neg_index]
+        index += 1
+        neg_index += 1
+
+# Declaration and Initialization
+arr = [1, 2, -3, -4, 5, -6, 7, -8]
+
+rearrange(arr)
+
+print("Array after rearrangement:", ' '.join(map(str, arr)))
+```
 ## Rearrange Array in Zigzag Fashion
 Rearrange an array such that elements are in zigzag order. An array is in zigzag order if `a < b > c < d > e`.
 
@@ -526,7 +1194,7 @@ Consider an array `[4, 3, 7, 8, 6, 2, 1]`. The rearranged array could be `[3, 7,
 2. If the current element is greater than the next element and the current index is even, swap them.
 3. If the current element is less than the next element and the current index is odd, swap them.
 
-### C++ Code
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -564,7 +1232,64 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Collections;
 
+public class Main {
+    public static void zigzag(ArrayList<Integer> arr) {
+        boolean flag = true; // true indicates < relation expected, false indicates > relation expected
+
+        for (int i = 0; i < arr.size() - 1; i++) {
+            if (flag) { // < relation expected
+                if (arr.get(i) > arr.get(i + 1)) {
+                    Collections.swap(arr, i, i + 1);
+                }
+            } else { // > relation expected
+                if (arr.get(i) < arr.get(i + 1)) {
+                    Collections.swap(arr, i, i + 1);
+                }
+            }
+            flag = !flag; // flip flag
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        Collections.addAll(arr, 4, 3, 7, 8, 6, 2, 1);
+
+        zigzag(arr);
+
+        System.out.print("Array after zigzag rearrangement: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def zigzag(arr):
+    flag = True # true indicates < relation expected, false indicates > relation expected
+
+    for i in range(len(arr) - 1):
+        if flag: # < relation expected
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+        else: # > relation expected
+            if arr[i] < arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+        flag = not flag # flip flag
+
+# Declaration and Initialization
+arr = [4, 3, 7, 8, 6, 2, 1]
+
+zigzag(arr)
+
+print("Array after zigzag rearrangement:", ' '.join(map(str, arr)))
+```
 ## Rearrange Array in Increasing-Decreasing Order
 Rearrange an array such that the first half is in increasing order and the second half is in decreasing order.
 
