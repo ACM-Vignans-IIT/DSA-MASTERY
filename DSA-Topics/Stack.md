@@ -1,3 +1,15 @@
+---
+title: 'Article on DSA Topic: Stack'
+description: In this article, we delve into Stack in the context of Data Structures and Algorithms (DSA).
+date: 2024-05-21
+author: Nehal Fathema
+tags:
+    - Data Structures
+    - Algorithms
+    - Stack
+---
+
+
 # Stack
 
 ## What is a Stack?
