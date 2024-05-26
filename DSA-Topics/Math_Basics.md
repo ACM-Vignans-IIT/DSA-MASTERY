@@ -1,5 +1,5 @@
 ---
-title: Article on DSA Topic: Mathematics Basic
+title: 'Article on DSA Topic: Mathematics Basic'
 description: In this article, we delve into the foundational principles of mathematics in the context of Data Structures and Algorithms (DSA).
 date: 2024-05-17
 author: Nehal Fathema
