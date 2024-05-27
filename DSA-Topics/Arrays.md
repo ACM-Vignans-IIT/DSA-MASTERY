@@ -1301,7 +1301,7 @@ Consider an array `[5, 2, 9, 1, 5, 6]`. The rearranged array could be `[1, 2, 5,
 2. Split the array into two halves.
 3. Reverse the second half.
 
-### C++ Code
+#### C++ 
 ```cpp
 #include <iostream>
 #include <vector>
@@ -1331,6 +1331,50 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void rearrangeIncDec(ArrayList<Integer> arr) {
+        Collections.sort(arr);
+        int n = arr.size();
+        int mid = n / 2;
+
+        Collections.reverse(arr.subList(mid, n));
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        Collections.addAll(arr, 5, 2, 9, 1, 5, 6);
+
+        rearrangeIncDec(arr);
+
+        System.out.print("Array after rearrangement in increasing-decreasing order: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def rearrange_inc_dec(arr):
+    arr.sort()
+    n = len(arr)
+    mid = n // 2
+
+    arr[mid:] = arr[mid:][::-1]
+
+# Declaration and Initialization
+arr = [5, 2, 9, 1, 5, 6]
+
+rearrange_inc_dec(arr)
+
+print("Array after rearrangement in increasing-decreasing order:", ' '.join(map(str, arr)))
+```
 
 ## Move All Zeros to the End
 Rearrange an array such that all zeros are moved to the end, maintaining the order of non-zero elements.
@@ -1343,7 +1387,7 @@ Consider an array `[1, 0, 2, 0, 0, 3, 4]`. The rearranged array could be `[1, 2,
 2. Place the non-zero elements in the beginning.
 3. Fill the remaining positions with zeros.
 
-## C++ Code 
+#### C++  
 ```cpp
 #include <iostream>
 #include <vector>
@@ -1378,6 +1422,60 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Main {
+    public static void moveZerosToEnd(ArrayList<Integer> arr) {
+        int count = 0; // Count of non-zero elements
+
+        for (int i = 0; i < arr.size(); i++) {
+            if (arr.get(i) != 0) {
+                arr.set(count++, arr.get(i)); // Place non-zero element at the current count index
+            }
+        }
+
+        while (count < arr.size()) {
+            arr.set(count++, 0); // Fill remaining positions with zeros
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(1, 0, 2, 0, 0, 3, 4));
+
+        moveZerosToEnd(arr);
+
+        System.out.print("Array after moving zeros to the end: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def move_zeros_to_end(arr):
+    count = 0 # Count of non-zero elements
+
+    for i in range(len(arr)):
+        if arr[i] != 0:
+            arr[count] = arr[i] # Place non-zero element at the current count index
+            count += 1
+
+    while count < len(arr):
+        arr[count] = 0 # Fill remaining positions with zeros
+        count += 1
+
+# Declaration and Initialization
+arr = [1, 0, 2, 0, 0, 3, 4]
+
+move_zeros_to_end(arr)
+
+print("Array after moving zeros to the end:", ' '.join(map(str, arr)))
+```
 ## Segregate Even and Odd Numbers
 Rearrange an array such that all even numbers appear before all odd numbers.
 
@@ -1391,7 +1489,7 @@ Consider an array `[12, 34, 45, 9, 8, 90, 3]`. The rearranged array could be `[1
 4. Swap the found odd and even numbers.
 5. Repeat the process until the start pointer is less than the end pointer.
 
-## C++ Code
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -1432,6 +1530,68 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Main {
+    public static void segregateEvenOdd(ArrayList<Integer> arr) {
+        int left = 0, right = arr.size() - 1;
+
+        while (left < right) {
+            while (arr.get(left) % 2 == 0 && left < right) {
+                left++;
+            }
+
+            while (arr.get(right) % 2 == 1 && left < right) {
+                right--;
+            }
+
+            if (left < right) {
+                Collections.swap(arr, left, right);
+                left++;
+                right--;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(12, 34, 45, 9, 8, 90, 3));
+
+        segregateEvenOdd(arr);
+
+        System.out.print("Array after segregating even and odd numbers: ");
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.print(arr.get(i) + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def segregate_even_odd(arr):
+    left, right = 0, len(arr) - 1
+
+    while left < right:
+        while arr[left] % 2 == 0 and left < right:
+            left += 1
+        while arr[right] % 2 == 1 and left < right:
+            right -= 1
+        if left < right:
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1
+            right -= 1
+
+# Declaration and Initialization
+arr = [12, 34, 45, 9, 8, 90, 3]
+
+segregate_even_odd(arr)
+
+print("Array after segregating even and odd numbers:", ' '.join(map(str, arr)))
+```
 ## Applications of Arrays
 1. **Data Storage**: Arrays are used to store and manage data efficiently in memory.
 2. **Matrix Operations**: Multi-dimensional arrays are used for mathematical and scientific computations involving matrices.
@@ -1462,6 +1622,7 @@ Multidimensional arrays are useful for:
 A 2D array is like a table with rows and columns. It can be visualized as a matrix.
 
 #### Declaration and Initialization
+#### C++
 ```cpp
 int arr[3][4] = {
     {1, 2, 3, 4},
@@ -1469,10 +1630,27 @@ int arr[3][4] = {
     {9, 10, 11, 12}
 };
 ```
+#### Java
+```java
+int[][] arr = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+};
+```
+#### Python
+```python
+arr = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12]
+]
+```
 ### Accessing Elements
 Elements in a 2D array are accessed using two indices: `arr[row][column]`.
 ### Example
 Consider a 2D array representing a 3x4 matrix:
+#### C++
 ```cpp
 #include <iostream>
 
@@ -1499,9 +1677,48 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[][] arr = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12}
+        };
+
+        // Access and print elements
+        System.out.println("Element at arr[1][2]: " + arr[1][2]); // Output: 7
+
+        // Print the 2D array
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+#### Python
+```python
+arr = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12]
+]
+
+# Access and print elements
+print("Element at arr[1][2]:", arr[1][2])  # Output: 7
+
+# Print the 2D array
+for row in arr:
+    print(*row)
+```
 ### 2. Three-Dimensional Array (3D Array)
 A 3D array adds another dimension to the 2D array, representing data in a 3D space.
 ### Declaration and Initialization
+#### C++
 ```cpp
 int arr[2][3][4] = {
     {
@@ -1516,10 +1733,41 @@ int arr[2][3][4] = {
     }
 };
 ```
+#### Java
+```java
+int[][][] arr = {
+    {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    },
+    {
+        {13, 14, 15, 16},
+        {17, 18, 19, 20},
+        {21, 22, 23, 24}
+    }
+};
+```
+#### Python
+```python
+arr = [
+    [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12]
+    ],
+    [
+        [13, 14, 15, 16],
+        [17, 18, 19, 20],
+        [21, 22, 23, 24]
+    ]
+]
+```
 ### Accessing Elements
 Elements in a 3D array are accessed using three indices: `arr[depth][row][column]`.
 ### Example
 Consider a 3D array representing a 2x3x4 matrix:
+#### C++
 ```cpp
 #include <iostream>
 
@@ -1557,12 +1805,72 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[][][] arr = {
+            {
+                {1, 2, 3, 4},
+                {5, 6, 7, 8},
+                {9, 10, 11, 12}
+            },
+            {
+                {13, 14, 15, 16},
+                {17, 18, 19, 20},
+                {21, 22, 23, 24}
+            }
+        };
+
+        // Access and print elements
+        System.out.println("Element at arr[1][2][3]: " + arr[1][2][3]); // Output: 24
+
+        // Print the 3D array
+        for (int i = 0; i < 2; i++) {
+            System.out.println("Depth " + i + ":");
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 4; k++) {
+                    System.out.print(arr[i][j][k] + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+    }
+}
+```
+#### Python
+```python
+arr = [
+    [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12]
+    ],
+    [
+        [13, 14, 15, 16],
+        [17, 18, 19, 20],
+        [21, 22, 23, 24]
+    ]
+]
+
+# Access and print elements
+print("Element at arr[1][2][3]:", arr[1][2][3])  # Output: 24
+
+# Print the 3D array
+for i in range(2):
+    print("Depth", i, ":")
+    for j in range(3):
+        print(*arr[i][j])
+    print()
+```
 ### Higher-Dimensional Arrays
 Higher-dimensional arrays extend the concept of 2D and 3D arrays to more dimensions, but they become more complex to visualize and manage. The principles of accessing and manipulating these arrays remain similar, with additional indices for each new dimension.
 
 ## Operations on Multidimensional Arrays
 ### Initializing Multidimensional Arrays
 Multidimensional arrays can be initialized in a variety of ways, including nested loops for dynamic initialization.
+#### C++
 ```cpp
 #include <iostream>
 
@@ -1590,8 +1898,47 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static void main(String[] args) {
+        int[][] arr = new int[3][4];
+
+        // Initialize the 2D array using nested loops
+        int value = 1;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                arr[i][j] = value++;
+            }
+        }
+
+        // Print the 2D array
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+#### Python
+```python
+# Initialize the 2D array using nested loops
+arr = [[0] * 4 for _ in range(3)]
+value = 1
+for i in range(3):
+    for j in range(4):
+        arr[i][j] = value
+        value += 1
+
+# Print the 2D array
+for row in arr:
+    print(*row)
+```
 ### Searching in Multidimensional Arrays
 Searching involves iterating through the array to find a specific element.
+#### C++
 ```cpp
 #include <iostream>
 
@@ -1625,8 +1972,59 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static boolean searchElement(int[][] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] == target) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int[][] arr = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12}
+        };
+
+        int target = 7;
+        if (searchElement(arr, target)) {
+            System.out.println("Element " + target + " found in the array.");
+        } else {
+            System.out.println("Element " + target + " not found in the array.");
+        }
+    }
+}
+```
+#### Python
+```python
+def search_element(arr, target):
+    for row in arr:
+        if target in row:
+            return True
+    return False
+
+arr = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12]
+]
+
+target = 7
+if search_element(arr, target):
+    print("Element", target, "found in the array.")
+else:
+    print("Element", target, "not found in the array.")
+```
 ### Sorting Multidimensional Arrays
 Sorting a multidimensional array can be complex and typically involves flattening the array, sorting it, and then restructuring it back into its original dimensions.
+#### C++
 ```cpp
 #include <iostream>
 #include <algorithm>
@@ -1658,6 +2056,54 @@ int main() {
 
     return 0;
 }
+```
+#### Java
+```java
+import java.util.Arrays;
+
+public class Main {
+    public static void sortRows(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            Arrays.sort(arr[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] arr = {
+            {4, 2, 3, 1},
+            {8, 7, 6, 5},
+            {12, 10, 11, 9}
+        };
+
+        sortRows(arr);
+
+        // Print the sorted 2D array
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+#### Python
+```python
+def sort_rows(arr):
+    for row in arr:
+        row.sort()
+
+arr = [
+    [4, 2, 3, 1],
+    [8, 7, 6, 5],
+    [12, 10, 11, 9]
+]
+
+sort_rows(arr)
+
+# Print the sorted 2D array
+for row in arr:
+    print(*row)
 ```
 ### Transposing a Matrix
 Transposing a matrix involves swapping rows and columns.
@@ -1694,6 +2140,58 @@ int main() {
 
     return 0;
 }
+```
+#### Java
+```java
+public class Main {
+    public static void transpose(int[][] arr, int[][] transposed) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                transposed[j][i] = arr[i][j];
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] arr = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+        int[][] transposed = new int[3][3];
+
+        transpose(arr, transposed);
+
+        // Print the transposed matrix
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(transposed[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+#### Python
+```python
+def transpose(arr):
+    transposed = [[0] * 3 for _ in range(3)]
+    for i in range(3):
+        for j in range(3):
+            transposed[j][i] = arr[i][j]
+    return transposed
+
+arr = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+transposed = transpose(arr)
+
+# Print the transposed matrix
+for row in transposed:
+    print(*row)
 ```
 ## Applications of Multidimensional Arrays
 1. **Matrix Operations**: Multiplication, addition, transposition.
@@ -1739,7 +2237,7 @@ The steps would be:
 
 Final result: The maximum sum subarray is `[4, -1, 2, 1]` with sum `6`.
 
-## C++ Code
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -1767,6 +2265,48 @@ int main() {
     cout << "Maximum sum subarray is " << max_sum << endl;
     return 0;
 }
+```
+#### Java
+```java
+import java.util.Arrays;
+
+public class Main {
+    public static int kadane(int[] nums) {
+        int currentMax = nums[0];
+        int globalMax = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            currentMax = Math.max(nums[i], currentMax + nums[i]);
+            if (currentMax > globalMax) {
+                globalMax = currentMax;
+            }
+        }
+
+        return globalMax;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int maxSum = kadane(nums);
+        System.out.println("Maximum sum subarray is " + maxSum);
+    }
+}
+```
+#### Python
+```python
+def kadane(nums):
+    current_max = nums[0]
+    global_max = nums[0]
+
+    for num in nums[1:]:
+        current_max = max(num, current_max + num)
+        global_max = max(global_max, current_max)
+
+    return global_max
+
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+max_sum = kadane(nums)
+print("Maximum sum subarray is", max_sum)
 ```
 ### Example Explained with Code
 Consider the array nums = `[-2, 1, -3, 4, -1, 2, 1, -5, 4]`:
@@ -1836,7 +2376,7 @@ The steps would be:
 
 Final result: `[0, 0, 1, 1, 2, 2]`.
 
-## C++ Code
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -1876,6 +2416,71 @@ int main() {
 
     return 0;
 }
+```
+#### Java
+```java
+import java.util.Arrays;
+
+public class Main {
+    public static void dutchNationalFlag(int[] arr, int pivot) {
+        int low = 0;
+        int mid = 0;
+        int high = arr.length - 1;
+
+        while (mid <= high) {
+            if (arr[mid] < pivot) {
+                int temp = arr[low];
+                arr[low] = arr[mid];
+                arr[mid] = temp;
+                low++;
+                mid++;
+            } else if (arr[mid] == pivot) {
+                mid++;
+            } else {
+                int temp = arr[mid];
+                arr[mid] = arr[high];
+                arr[high] = temp;
+                high--;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2, 0, 2, 1, 1, 0};
+        int pivot = 1;
+        dutchNationalFlag(arr, pivot);
+
+        System.out.print("Sorted array: ");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+```
+#### Python
+```python
+def dutch_national_flag(arr, pivot):
+    low = 0
+    mid = 0
+    high = len(arr) - 1
+
+    while mid <= high:
+        if arr[mid] < pivot:
+            arr[low], arr[mid] = arr[mid], arr[low]
+            low += 1
+            mid += 1
+        elif arr[mid] == pivot:
+            mid += 1
+        else:
+            arr[mid], arr[high] = arr[high], arr[mid]
+            high -= 1
+
+arr = [2, 0, 2, 1, 1, 0]
+pivot = 1
+dutch_national_flag(arr, pivot)
+
+print("Sorted array:", arr)
 ```
 ### Example Explained with Code
 Consider the array arr = {2, 0, 2, 1, 1, 0} with pivot 1:
