@@ -31,6 +31,24 @@ C-style strings are arrays of characters terminated by a null character.
 char str1[] = "Hello";
 char str2[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
 ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "Hello"; // Equivalent to char str1[] = "Hello";
+        char[] str2 = {'H', 'e', 'l', 'l', 'o', '\0'}; // Equivalent to char str2[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+        
+        System.out.println("str1: " + str1);
+        System.out.println("str2: " + new String(str2).trim()); // Trim to remove trailing null character
+    }
+}
+```
+```python
+str1 = "Hello"  # Equivalent to char str1[] = "Hello";
+str2 = ['H', 'e', 'l', 'l', 'o', '\0']  # Equivalent to char str2[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+
+print("str1:", str1)
+print("str2:", ''.join(str2).strip('\0'))  # Strip to remove trailing null character
+```
 ### Accessing and Modifying Elements
 ```cpp
 #include <iostream>
@@ -43,6 +61,26 @@ int main() {
     cout << str << endl;     // Output: Hallo
     return 0;
 }
+```
+In Java, strings are immutable, meaning you cannot directly modify their contents. To achieve similar functionality, you can use a char array or StringBuilder. Here, we'll use a char array to directly modify elements:
+```java
+public class Main {
+    public static void main(String[] args) {
+        char[] str = {'H', 'e', 'l', 'l', 'o'};
+        System.out.println(str[1]);  // Output: e
+        str[1] = 'a';
+        System.out.println(new String(str));  // Output: Hallo
+    }
+}
+```
+In Python, strings are also immutable. You can convert the string to a list of characters to modify it and then convert it back to a string:
+```python
+str = "Hello"
+print(str[1])  # Output: e
+str = list(str)
+str[1] = 'a'
+str = ''.join(str)
+print(str)  # Output: Hallo
 ```
 ### Declaration and Initialization
 ```cpp
@@ -57,6 +95,20 @@ int main() {
     cout << str1 << " " << str2 << endl;  // Output: Hello World
     return 0;
 }
+```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        System.out.println(str1 + " " + str2);  // Output: Hello World
+    }
+}
+```
+```python
+str1 = "Hello"
+str2 = "World"
+print(f"{str1} {str2}")  # Output: Hello World
 ```
 ## String Operations
 Strings support a variety of operations, including:
@@ -84,6 +136,22 @@ int main() {
     return 0;
 }
 ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        String result = str1 + " " + str2;
+        System.out.println(result);  // Output: Hello World
+    }
+}
+```
+```python
+str1 = "Hello"
+str2 = "World"
+result = str1 + " " + str2
+print(result)  # Output: Hello World
+```
 ### Comparison
 Strings can be compared using the comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`).
 ```cpp
@@ -102,6 +170,27 @@ int main() {
     }
     return 0;
 }
+```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "World";
+        if (str1.equals(str2)) {
+            System.out.println("Strings are equal");
+        } else {
+            System.out.println("Strings are not equal");
+        }
+    }
+}
+```
+```python
+str1 = "Hello"
+str2 = "World"
+if str1 == str2:
+    print("Strings are equal")
+else:
+    print("Strings are not equal")
 ```
 ### Finding Substrings
 Finding the position of a substring within a string can be done using `find()`.
@@ -122,6 +211,27 @@ int main() {
     return 0;
 }
 ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        int pos = str.indexOf("World");
+        if (pos != -1) {
+            System.out.println("Found 'World' at position: " + pos);  // Output: Found 'World' at position: 6
+        } else {
+            System.out.println("'World' not found");
+        }
+    }
+}
+```
+```python
+str = "Hello World"
+pos = str.find("World")
+if pos != -1:
+    print(f"Found 'World' at position: {pos}")  # Output: Found 'World' at position: 6
+else:
+    print("'World' not found")
+```
 ### Substring Extraction
 Extracting a substring from a string can be done using `substr()`.
 ```cpp
@@ -136,6 +246,20 @@ int main() {
     cout << substr << endl;  // Output: World
     return 0;
 }
+```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        String substr = str.substring(6, 11);  // Extract "World"
+        System.out.println(substr);  // Output: World
+    }
+}
+```
+```python
+str = "Hello World"
+substr = str[6:11]  # Extract "World"
+print(substr)  # Output: World
 ```
 ### Replacing Substrings
 Replacing part of a string with another string can be done using `replace()`.
@@ -152,6 +276,20 @@ int main() {
     return 0;
 }
 ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        String newStr = str.substring(0, 6) + "Universe" + str.substring(11);
+        System.out.println(newStr);  // Output: Hello Universe
+    }
+}
+```
+```python
+str = "Hello World"
+new_str = str[:6] + "Universe" + str[11:]
+print(new_str)  # Output: Hello Universe
+```
 ### Length
 The length of a string can be obtained using `length()` or `size()`.
 ```cpp
@@ -165,6 +303,18 @@ int main() {
     cout << "Length of string: " << str.length() << endl;  // Output: Length of string: 11
     return 0;
 }
+```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        System.out.println("Length of string: " + str.length());  // Output: Length of string: 11
+    }
+}
+```
+```python
+str = "Hello World"
+print("Length of string:", len(str))  # Output: Length of string: 11
 ```
 ## Advanced String Operations
 ### Searching for Characters
@@ -185,6 +335,27 @@ int main() {
     return 0;
 }
 ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello World";
+        int pos = str.indexOf('o');
+        if (pos != -1) {
+            System.out.println("First occurrence of 'o' at position: " + pos);  // Output: First occurrence of 'o' at position: 4
+        } else {
+            System.out.println("'o' not found");
+        }
+    }
+}
+```
+```python
+str = "Hello World"
+pos = str.find('o')
+if pos != -1:
+    print("First occurrence of 'o' at position:", pos)  # Output: First occurrence of 'o' at position: 4
+else:
+    print("'o' not found")
+```
 ### String to Number Conversion
 ```cpp
 #include <iostream>
@@ -199,6 +370,20 @@ int main() {
     return 0;
 }
 ```
+```java
+public class Main {
+    public static void main(String[] args) {
+        String str = "12345";
+        int num = Integer.parseInt(str);  // Convert string to int
+        System.out.println("Converted number: " + num);  // Output: Converted number: 12345
+    }
+}
+```
+```python
+str = "12345"
+num = int(str)  # Convert string to int
+print("Converted number:", num)  # Output: Converted number: 12345
+```
 ### Number to String Conversion
 ```cpp
 #include <iostream>
@@ -212,6 +397,20 @@ int main() {
     cout << "Converted string: " << str << endl;  // Output: Converted string: 12345
     return 0;
 }
+```
+```java
+public class Main {
+    public static void main(String[] args) {
+        int num = 12345;
+        String str = String.valueOf(num);  // Convert int to string
+        System.out.println("Converted string: " + str);  // Output: Converted string: 12345
+    }
+}
+```
+```python
+num = 12345
+str = str(num)  # Convert int to string
+print("Converted string:", str)  # Output: Converted string: 12345
 ```
 ## Applications of Strings
 1. **Text Processing**: Manipulating and analyzing text data.
@@ -267,6 +466,54 @@ int main() {
     return 0;
 }
 ```
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void generateSubsequences(String str, int index, String current, List<String> subsequences) {
+        if (index == str.length()) {
+            subsequences.add(current);
+            return;
+        }
+        // Include current character
+        generateSubsequences(str, index + 1, current + str.charAt(index), subsequences);
+        // Exclude current character
+        generateSubsequences(str, index + 1, current, subsequences);
+    }
+
+    public static void main(String[] args) {
+        String str = "abc";
+        List<String> subsequences = new ArrayList<>();
+        generateSubsequences(str, 0, "", subsequences);
+        System.out.println("Subsequences of 'abc':");
+        for (String subsequence : subsequences) {
+            System.out.println(subsequence);
+        }
+    }
+}
+```
+```python
+def generate_subsequences(string, index, current, subsequences):
+    if index == len(string):
+        subsequences.append(current)
+        return
+    # Include current character
+    generate_subsequences(string, index + 1, current + string[index], subsequences)
+    # Exclude current character
+    generate_subsequences(string, index + 1, current, subsequences)
+
+def main():
+    string = "abc"
+    subsequences = []
+    generate_subsequences(string, 0, "", subsequences)
+    print("Subsequences of 'abc':")
+    for subsequence in subsequences:
+        print(subsequence)
+
+if __name__ == "__main__":
+    main()
+```
 ### Example: Substring Generation
 To generate all possible substrings of a string, we can use nested loops.
 ```cpp
@@ -293,6 +540,47 @@ int main() {
     }
     return 0;
 }
+```
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void generateSubstrings(String str, List<String> substrings) {
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i; j < str.length(); j++) {
+                substrings.add(str.substring(i, j + 1));
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String str = "abc";
+        List<String> substrings = new ArrayList<>();
+        generateSubstrings(str, substrings);
+        System.out.println("Substrings of 'abc':");
+        for (String substring : substrings) {
+            System.out.println(substring);
+        }
+    }
+}
+```
+```python
+def generate_substrings(string, substrings):
+    for i in range(len(string)):
+        for j in range(i, len(string)):
+            substrings.append(string[i:j + 1])
+
+def main():
+    string = "abc"
+    substrings = []
+    generate_substrings(string, substrings)
+    print("Substrings of 'abc':")
+    for substring in substrings:
+        print(substring)
+
+if __name__ == "__main__":
+    main()
 ```
 ### Checking Subsequence
 To check if a string is a subsequence of another string, we can use two pointers to iterate through both strings.
@@ -322,6 +610,48 @@ int main() {
     return 0;
 }
 ```
+```java
+public class Main {
+    public static boolean isSubsequence(String s, String t) {
+        int i = 0, j = 0;
+        while (i < s.length() && j < t.length()) {
+            if (s.charAt(i) == t.charAt(j)) {
+                i++;
+            }
+            j++;
+        }
+        return i == s.length();
+    }
+
+    public static void main(String[] args) {
+        String s = "abc", t = "ahbgdc";
+        if (isSubsequence(s, t)) {
+            System.out.println(s + " is a subsequence of " + t);
+        } else {
+            System.out.println(s + " is not a subsequence of " + t);
+        }
+    }
+}
+```
+```python
+def is_subsequence(s, t):
+    i, j = 0, 0
+    while i < len(s) and j < len(t):
+        if s[i] == t[j]:
+            i += 1
+        j += 1
+    return i == len(s)
+
+def main():
+    s, t = "abc", "ahbgdc"
+    if is_subsequence(s, t):
+        print(s + " is a subsequence of " + t)
+    else:
+        print(s + " is not a subsequence of " + t)
+
+if __name__ == "__main__":
+    main()
+```
 Checking Substring
 To check if a string is a substring of another string, we can use the `find()` function.
 ```cpp
@@ -342,6 +672,36 @@ int main() {
     }
     return 0;
 }
+```
+```java
+public class Main {
+    public static boolean isSubstring(String s, String t) {
+        return t.contains(s);
+    }
+
+    public static void main(String[] args) {
+        String s = "def", t = "abcdef";
+        if (isSubstring(s, t)) {
+            System.out.println(s + " is a substring of " + t);
+        } else {
+            System.out.println(s + " is not a substring of " + t);
+        }
+    }
+}
+```
+```python
+def is_substring(s, t):
+    return s in t
+
+def main():
+    s, t = "def", "abcdef"
+    if is_substring(s, t):
+        print(s + " is a substring of " + t)
+    else:
+        print(s + " is not a substring of " + t)
+
+if __name__ == "__main__":
+    main()
 ```
 # Reverse and Rotation in a String
 
@@ -378,6 +738,31 @@ int main() {
     return 0;
 }
 ```
+```java
+public class Main {
+    public static String reverseString(String str) {
+        return new StringBuilder(str).reverse().toString();
+    }
+
+    public static void main(String[] args) {
+        String str = "hello";
+        System.out.println("Original string: " + str);
+        System.out.println("Reversed string: " + reverseString(str));
+    }
+}
+```
+```python
+def reverse_string(s):
+    return s[::-1]
+
+def main():
+    s = "hello"
+    print("Original string:", s)
+    print("Reversed string:", reverse_string(s))
+
+if __name__ == "__main__":
+    main()
+```
 ## Rotate a String
 ### What is Rotating a String?
 Rotating a string means shifting the characters of the string to the left or right by a certain number of positions. There are two types of rotations:
@@ -410,6 +795,36 @@ int main() {
     cout << "Left rotated string by " << d << " positions: " << leftRotateString(str, d) << endl;
     return 0;
 }
+```
+```java
+public class Main {
+    public static String leftRotateString(String str, int d) {
+        int n = str.length();
+        d = d % n; // Handle cases where d > n
+        return str.substring(d) + str.substring(0, d);
+    }
+
+    public static void main(String[] args) {
+        String str = "abcdef";
+        int d = 2;
+        System.out.println("Original string: " + str);
+        System.out.println("Left rotated string by " + d + " positions: " + leftRotateString(str, d));
+    }
+}
+```
+```python
+def left_rotate_string(s, d):
+    d = d % len(s)  # Handle cases where d > len(s)
+    return s[d:] + s[:d]
+
+def main():
+    s = "abcdef"
+    d = 2
+    print("Original string:", s)
+    print("Left rotated string by", d, "positions:", left_rotate_string(s, d))
+
+if __name__ == "__main__":
+    main()
 ```
 ### Right Rotation in C++
 Right rotation can be achieved by concatenating the substring from the end of the string to the rotation point with the substring from the beginning of the string to the end of the string minus the rotation point.
