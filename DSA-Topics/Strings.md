@@ -27,10 +27,12 @@ Strings are fundamental in programming because they allow:
 C-style strings are arrays of characters terminated by a null character.
 
 #### Declaration and Initialization
+#### C++
 ```cpp
 char str1[] = "Hello";
 char str2[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -42,6 +44,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str1 = "Hello"  # Equivalent to char str1[] = "Hello";
 str2 = ['H', 'e', 'l', 'l', 'o', '\0']  # Equivalent to char str2[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
@@ -50,6 +53,7 @@ print("str1:", str1)
 print("str2:", ''.join(str2).strip('\0'))  # Strip to remove trailing null character
 ```
 ### Accessing and Modifying Elements
+#### C++
 ```cpp
 #include <iostream>
 using namespace std;
@@ -63,6 +67,7 @@ int main() {
 }
 ```
 In Java, strings are immutable, meaning you cannot directly modify their contents. To achieve similar functionality, you can use a char array or StringBuilder. Here, we'll use a char array to directly modify elements:
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -74,6 +79,7 @@ public class Main {
 }
 ```
 In Python, strings are also immutable. You can convert the string to a list of characters to modify it and then convert it back to a string:
+#### Python
 ```python
 str = "Hello"
 print(str[1])  # Output: e
@@ -83,6 +89,7 @@ str = ''.join(str)
 print(str)  # Output: Hallo
 ```
 ### Declaration and Initialization
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -96,6 +103,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -105,6 +113,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str1 = "Hello"
 str2 = "World"
@@ -122,6 +131,7 @@ Strings support a variety of operations, including:
 
 ### Concatenation
 Concatenation is combining two or more strings into one.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -136,6 +146,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -146,6 +157,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str1 = "Hello"
 str2 = "World"
@@ -154,6 +166,7 @@ print(result)  # Output: Hello World
 ```
 ### Comparison
 Strings can be compared using the comparison operators (`==`, `!=`, `<`, `>`, `<=`, `>=`).
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -171,6 +184,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -184,6 +198,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str1 = "Hello"
 str2 = "World"
@@ -194,6 +209,7 @@ else:
 ```
 ### Finding Substrings
 Finding the position of a substring within a string can be done using `find()`.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -211,6 +227,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -224,6 +241,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str = "Hello World"
 pos = str.find("World")
@@ -234,6 +252,7 @@ else:
 ```
 ### Substring Extraction
 Extracting a substring from a string can be done using `substr()`.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -247,6 +266,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -256,6 +276,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str = "Hello World"
 substr = str[6:11]  # Extract "World"
@@ -263,6 +284,7 @@ print(substr)  # Output: World
 ```
 ### Replacing Substrings
 Replacing part of a string with another string can be done using `replace()`.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -276,6 +298,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -285,6 +308,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str = "Hello World"
 new_str = str[:6] + "Universe" + str[11:]
@@ -292,6 +316,7 @@ print(new_str)  # Output: Hello Universe
 ```
 ### Length
 The length of a string can be obtained using `length()` or `size()`.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -304,6 +329,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -312,12 +338,14 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str = "Hello World"
 print("Length of string:", len(str))  # Output: Length of string: 11
 ```
 ## Advanced String Operations
 ### Searching for Characters
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -335,6 +363,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -348,6 +377,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str = "Hello World"
 pos = str.find('o')
@@ -357,6 +387,7 @@ else:
     print("'o' not found")
 ```
 ### String to Number Conversion
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -370,6 +401,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -379,12 +411,14 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 str = "12345"
 num = int(str)  # Convert string to int
 print("Converted number:", num)  # Output: Converted number: 12345
 ```
 ### Number to String Conversion
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -398,6 +432,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -407,6 +442,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 num = 12345
 str = str(num)  # Convert int to string
@@ -438,6 +474,7 @@ A substring of a string is a contiguous sequence of characters within the string
 
 ## Example: Subsequence Generation
 To generate all possible subsequences of a string, we can use recursion.
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -466,6 +503,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -493,6 +531,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 def generate_subsequences(string, index, current, subsequences):
     if index == len(string):
@@ -516,6 +555,7 @@ if __name__ == "__main__":
 ```
 ### Example: Substring Generation
 To generate all possible substrings of a string, we can use nested loops.
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -541,6 +581,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -565,6 +606,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 def generate_substrings(string, substrings):
     for i in range(len(string)):
@@ -584,6 +626,7 @@ if __name__ == "__main__":
 ```
 ### Checking Subsequence
 To check if a string is a subsequence of another string, we can use two pointers to iterate through both strings.
+#### C++
 ```cpp
 #include <iostream>
 
@@ -610,6 +653,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static boolean isSubsequence(String s, String t) {
@@ -633,6 +677,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 def is_subsequence(s, t):
     i, j = 0, 0
@@ -654,6 +699,7 @@ if __name__ == "__main__":
 ```
 Checking Substring
 To check if a string is a substring of another string, we can use the `find()` function.
+#### C++
 ```cpp
 #include <iostream>
 
@@ -673,6 +719,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static boolean isSubstring(String s, String t) {
@@ -689,6 +736,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 def is_substring(s, t):
     return s in t
@@ -716,7 +764,7 @@ Reversed string: "olleh"
 
 ### C++ Code for Reversing a String
 We can reverse a string using a loop to swap characters from the beginning and the end, moving towards the center.
-
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -738,6 +786,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static String reverseString(String str) {
@@ -751,6 +800,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 def reverse_string(s):
     return s[::-1]
@@ -776,6 +826,7 @@ For a string "abcdef":
 * Right rotation by 2 positions: "efabcd"
 ### Left Rotation in C++
 Left rotation can be achieved by concatenating the substring from the rotation point to the end of the string with the substring from the beginning of the string to the rotation point.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -796,6 +847,7 @@ int main() {
     return 0;
 }
 ```
+#### Java
 ```java
 public class Main {
     public static String leftRotateString(String str, int d) {
@@ -812,6 +864,7 @@ public class Main {
     }
 }
 ```
+#### Python
 ```python
 def left_rotate_string(s, d):
     d = d % len(s)  # Handle cases where d > len(s)
@@ -828,6 +881,7 @@ if __name__ == "__main__":
 ```
 ### Right Rotation in C++
 Right rotation can be achieved by concatenating the substring from the end of the string to the rotation point with the substring from the beginning of the string to the end of the string minus the rotation point.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -847,6 +901,39 @@ int main() {
     cout << "Right rotated string by " << d << " positions: " << rightRotateString(str, d) << endl;
     return 0;
 }
+```
+#### Java
+```java
+public class Main {
+    public static String rightRotateString(String str, int d) {
+        int n = str.length();
+        d = d % n; // Handle cases where d > n
+        return str.substring(n - d) + str.substring(0, n - d);
+    }
+
+    public static void main(String[] args) {
+        String str = "abcdef";
+        int d = 2;
+        System.out.println("Original string: " + str);
+        System.out.println("Right rotated string by " + d + " positions: " + rightRotateString(str, d));
+    }
+}
+```
+#### Python
+```python
+def right_rotate_string(s, d):
+    n = len(s)
+    d = d % n  # Handle cases where d > len(s)
+    return s[-d:] + s[:-d]
+
+def main():
+    s = "abcdef"
+    d = 2
+    print("Original string:", s)
+    print("Right rotated string by", d, "positions:", right_rotate_string(s, d))
+
+if __name__ == "__main__":
+    main()
 ```
 ### Applications of String Reversal and Rotation
 1. **Palindrome Check**: Reversing a string can be used to check if the string is a palindrome.
@@ -874,7 +961,7 @@ Binary strings are fundamental in computer science because they:
 ### Counting Ones and Zeros
 Counting the number of '1's and '0's in a binary string is a common operation.
 
-#### C++ Code Example
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -901,9 +988,70 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.*;
+
+public class Main {
+    public static Pair<Integer, Integer> countOnesAndZeros(String binaryString) {
+        int countOnes = 0, countZeros = 0;
+        for (char ch : binaryString.toCharArray()) {
+            if (ch == '1') {
+                countOnes++;
+            } else if (ch == '0') {
+                countZeros++;
+            }
+        }
+        return new Pair<>(countOnes, countZeros);
+    }
+
+    public static void main(String[] args) {
+        String binaryString = "1101001";
+        Pair<Integer, Integer> counts = countOnesAndZeros(binaryString);
+        System.out.println("Number of 1's: " + counts.getKey());
+        System.out.println("Number of 0's: " + counts.getValue());
+    }
+
+    // Simple implementation of Pair class
+    public static class Pair<K, V> {
+        private final K key;
+        private final V value;
+
+        public Pair(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public K getKey() { return key; }
+        public V getValue() { return value; }
+    }
+}
+```
+#### Python
+```python
+def count_ones_and_zeros(binary_string):
+    count_ones = 0
+    count_zeros = 0
+    for ch in binary_string:
+        if ch == '1':
+            count_ones += 1
+        elif ch == '0':
+            count_zeros += 1
+    return count_ones, count_zeros
+
+def main():
+    binary_string = "1101001"
+    counts = count_ones_and_zeros(binary_string)
+    print("Number of 1's:", counts[0])
+    print("Number of 0's:", counts[1])
+
+if __name__ == "__main__":
+    main()
+```
 ### Bitwise Operations
 Bitwise operations are performed directly on the bits of binary strings.
 ### AND Operation
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -926,7 +1074,42 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static String bitwiseAND(String str1, String str2) {
+        StringBuilder result = new StringBuilder();
+        int len = Math.min(str1.length(), str2.length());
+        for (int i = 0; i < len; i++) {
+            result.append((str1.charAt(i) == '1' && str2.charAt(i) == '1') ? '1' : '0');
+        }
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String str1 = "1101";
+        String str2 = "1011";
+        System.out.println("Bitwise AND: " + bitwiseAND(str1, str2));  // Output: 1001
+    }
+}
+```
+#### Python
+```python
+def bitwise_and(str1, str2):
+    len_min = min(len(str1), len(str2))
+    result = ''.join(['1' if str1[i] == '1' and str2[i] == '1' else '0' for i in range(len_min)])
+    return result
+
+def main():
+    str1 = "1101"
+    str2 = "1011"
+    print("Bitwise AND:", bitwise_and(str1, str2))  # Output: 1001
+
+if __name__ == "__main__":
+    main()
+```
 ### OR Operation
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -949,7 +1132,42 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static String bitwiseOR(String str1, String str2) {
+        StringBuilder result = new StringBuilder();
+        int len = Math.min(str1.length(), str2.length());
+        for (int i = 0; i < len; i++) {
+            result.append((str1.charAt(i) == '1' || str2.charAt(i) == '1') ? '1' : '0');
+        }
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String str1 = "1101";
+        String str2 = "1011";
+        System.out.println("Bitwise OR: " + bitwiseOR(str1, str2));  // Output: 1111
+    }
+}
+```
+#### Python
+```python
+def bitwise_or(str1, str2):
+    len_min = min(len(str1), len(str2))
+    result = ''.join(['1' if str1[i] == '1' or str2[i] == '1' else '0' for i in range(len_min)])
+    return result
+
+def main():
+    str1 = "1101"
+    str2 = "1011"
+    print("Bitwise OR:", bitwise_or(str1, str2))  # Output: 1111
+
+if __name__ == "__main__":
+    main()
+```
 ### XOR Operation
+#### C++
 ```cpp 
 #include <iostream>
 #include <string>
@@ -972,8 +1190,43 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static String bitwiseXOR(String str1, String str2) {
+        StringBuilder result = new StringBuilder();
+        int len = Math.min(str1.length(), str2.length());
+        for (int i = 0; i < len; i++) {
+            result.append((str1.charAt(i) != str2.charAt(i)) ? '1' : '0');
+        }
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String str1 = "1101";
+        String str2 = "1011";
+        System.out.println("Bitwise XOR: " + bitwiseXOR(str1, str2));  // Output: 0110
+    }
+}
+```
+#### Python
+```python
+def bitwise_xor(str1, str2):
+    len_min = min(len(str1), len(str2))
+    result = ''.join(['1' if str1[i] != str2[i] else '0' for i in range(len_min)])
+    return result
+
+def main():
+    str1 = "1101"
+    str2 = "1011"
+    print("Bitwise XOR:", bitwise_xor(str1, str2))  # Output: 0110
+
+if __name__ == "__main__":
+    main()
+```
 ### Binary to Decimal Conversion
 Converting a binary string to a decimal integer.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -998,8 +1251,48 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.lang.Math;
+
+public class Main {
+    public static int binaryToDecimal(String binaryString) {
+        int decimalValue = 0;
+        int length = binaryString.length();
+        for (int i = 0; i < length; i++) {
+            if (binaryString.charAt(length - i - 1) == '1') {
+                decimalValue += Math.pow(2, i);
+            }
+        }
+        return decimalValue;
+    }
+
+    public static void main(String[] args) {
+        String binaryString = "1101";
+        System.out.println("Decimal value: " + binaryToDecimal(binaryString));  // Output: 13
+    }
+}
+```
+#### Python
+```python
+def binary_to_decimal(binary_string):
+    decimal_value = 0
+    length = len(binary_string)
+    for i in range(length):
+        if binary_string[length - i - 1] == '1':
+            decimal_value += 2 ** i
+    return decimal_value
+
+def main():
+    binary_string = "1101"
+    print("Decimal value:", binary_to_decimal(binary_string))  # Output: 13
+
+if __name__ == "__main__":
+    main()
+```
 ### Decimal to Binary Conversion
 Converting a decimal integer to a binary string.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -1022,8 +1315,46 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static String decimalToBinary(int decimalValue) {
+        if (decimalValue == 0) return "0";
+        StringBuilder binaryString = new StringBuilder();
+        while (decimalValue > 0) {
+            binaryString.insert(0, (decimalValue % 2 == 0 ? "0" : "1"));
+            decimalValue /= 2;
+        }
+        return binaryString.toString();
+    }
+
+    public static void main(String[] args) {
+        int decimalValue = 13;
+        System.out.println("Binary string: " + decimalToBinary(decimalValue));  // Output: 1101
+    }
+}
+```
+#### Python
+```python
+def decimal_to_binary(decimal_value):
+    if decimal_value == 0:
+        return "0"
+    binary_string = ""
+    while decimal_value > 0:
+        binary_string = ("0" if decimal_value % 2 == 0 else "1") + binary_string
+        decimal_value //= 2
+    return binary_string
+
+def main():
+    decimal_value = 13
+    print("Binary string:", decimal_to_binary(decimal_value))  # Output: 1101
+
+if __name__ == "__main__":
+    main()
+```
 ### Finding Substrings in a Binary String
 Finding all occurrences of a substring in a binary string.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -1053,6 +1384,53 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static List<Integer> findAllSubstrings(String str, String substr) {
+        List<Integer> positions = new ArrayList<>();
+        int pos = str.indexOf(substr);
+        while (pos != -1) {
+            positions.add(pos);
+            pos = str.indexOf(substr, pos + 1);
+        }
+        return positions;
+    }
+
+    public static void main(String[] args) {
+        String str = "110110011";
+        String substr = "110";
+        List<Integer> positions = findAllSubstrings(str, substr);
+        System.out.print("Positions of '" + substr + "': ");
+        for (int pos : positions) {
+            System.out.print(pos + " ");
+        }
+        System.out.println();  // Output: Positions of '110': 0 3
+    }
+}
+```
+#### Python
+```python
+def find_all_substrings(s, sub):
+    positions = []
+    pos = s.find(sub)
+    while pos != -1:
+        positions.append(pos)
+        pos = s.find(sub, pos + 1)
+    return positions
+
+def main():
+    s = "110110011"
+    sub = "110"
+    positions = find_all_substrings(s, sub)
+    print("Positions of '{}': {}".format(sub, positions))  # Output: Positions of '110': [0, 3]
+
+if __name__ == "__main__":
+    main()
+```
 # Palindrome
 
 ## What is a Palindrome?
@@ -1078,7 +1456,7 @@ To determine if a string is a palindrome, we can compare characters from the beg
 
 ### C++ Code for Checking Palindrome
 Here is a simple implementation to check if a string is a palindrome:
-
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -1108,8 +1486,57 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static boolean isPalindrome(String str) {
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String str = "racecar";
+        if (isPalindrome(str)) {
+            System.out.println(str + " is a palindrome.");
+        } else {
+            System.out.println(str + " is not a palindrome.");
+        }
+    }
+}
+```
+#### Python
+```python
+def is_palindrome(s):
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+def main():
+    s = "racecar"
+    if is_palindrome(s):
+        print(f"{s} is a palindrome.")
+    else:
+        print(f"{s} is not a palindrome.")
+
+if __name__ == "__main__":
+    main()
+```
 ### C++ Code for Checking Number Palindrome
 Here is an implementation to check if a number is a palindrome:
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -1140,8 +1567,59 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static boolean isPalindrome(int number) {
+        String str = Integer.toString(number);
+        int left = 0;
+        int right = str.length() - 1;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int number = 12321;
+        if (isPalindrome(number)) {
+            System.out.println(number + " is a palindrome.");
+        } else {
+            System.out.println(number + " is not a palindrome.");
+        }
+    }
+}
+```
+#### Python
+```python
+def is_palindrome(number):
+    s = str(number)
+    left = 0
+    right = len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+def main():
+    number = 12321
+    if is_palindrome(number):
+        print(f"{number} is a palindrome.")
+    else:
+        print(f"{number} is not a palindrome.")
+
+if __name__ == "__main__":
+    main()
+```
 ### Checking if a Phrase is a Palindrome
 To check if a phrase is a palindrome, we need to ignore spaces, punctuation, and capitalization.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -1178,6 +1656,57 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static boolean isPalindromePhrase(String str) {
+        String filteredStr = str.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        int left = 0;
+        int right = filteredStr.length() - 1;
+        while (left < right) {
+            if (filteredStr.charAt(left) != filteredStr.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String phrase = "A man, a plan, a canal, Panama!";
+        if (isPalindromePhrase(phrase)) {
+            System.out.println("\"" + phrase + "\" is a palindrome.");
+        } else {
+            System.out.println("\"" + phrase + "\" is not a palindrome.");
+        }
+    }
+}
+```
+#### Python
+```python
+import re
+
+def is_palindrome_phrase(phrase):
+    filtered_str = re.sub(r'[^a-zA-Z0-9]', '', phrase.lower())
+    left, right = 0, len(filtered_str) - 1
+    while left < right:
+        if filtered_str[left] != filtered_str[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+def main():
+    phrase = "A man, a plan, a canal, Panama!"
+    if is_palindrome_phrase(phrase):
+        print(f'"{phrase}" is a palindrome.')
+    else:
+        print(f'"{phrase}" is not a palindrome.')
+
+if __name__ == "__main__":
+    main()
+```
 # Lexicographic Pattern
 
 ## What is Lexicographic Order?
@@ -1206,7 +1735,7 @@ To generate the next lexicographic permutation of a string or array:
 
 ### C++ Code for Generating Next Lexicographic Permutation
 Here is an implementation to find the next lexicographic permutation of a string:
-
+#### C++
 ```cpp
 #include <iostream>
 #include <algorithm>
@@ -1240,8 +1769,82 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.Arrays;
+
+public class Main {
+    public static boolean nextPermutation(char[] arr) {
+        int n = arr.length;
+        int k = n - 2;
+        while (k >= 0 && arr[k] >= arr[k + 1]) {
+            k--;
+        }
+        if (k < 0) {
+            return false;
+        }
+        int l = n - 1;
+        while (arr[k] >= arr[l]) {
+            l--;
+        }
+        swap(arr, k, l);
+        reverse(arr, k + 1, n - 1);
+        return true;
+    }
+
+    public static void swap(char[] arr, int i, int j) {
+        char temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static void reverse(char[] arr, int start, int end) {
+        while (start < end) {
+            swap(arr, start, end);
+            start++;
+            end--;
+        }
+    }
+
+    public static void main(String[] args) {
+        String str = "abc";
+        char[] arr = str.toCharArray();
+        Arrays.sort(arr);
+        do {
+            System.out.println("Next permutation: " + new String(arr));
+        } while (nextPermutation(arr));
+    }
+}
+```
+#### Python
+```python
+def next_permutation(arr):
+    k = len(arr) - 2
+    while k >= 0 and arr[k] >= arr[k + 1]:
+        k -= 1
+    if k < 0:
+        return False
+    l = len(arr) - 1
+    while arr[k] >= arr[l]:
+        l -= 1
+    arr[k], arr[l] = arr[l], arr[k]
+    arr[k + 1:] = reversed(arr[k + 1:])
+    return True
+
+def main():
+    str = "abc"
+    arr = sorted(str)
+    while True:
+        print("Next permutation:", ''.join(arr))
+        if not next_permutation(arr):
+            break
+
+if __name__ == "__main__":
+    main()
+```
 ### Lexicographic Sorting
 Sorting a collection of strings in lexicographic order.
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -1259,6 +1862,39 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> words = new ArrayList<>();
+        words.add("apple");
+        words.add("banana");
+        words.add("cat");
+        words.add("catalog");
+        words.add("dog");
+        words.add("dogs");
+
+        Collections.sort(words);
+
+        System.out.println("Lexicographically sorted strings:");
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+}
+```
+#### Python
+```python
+words = ["apple", "banana", "cat", "catalog", "dog", "dogs"]
+words.sort()
+
+print("Lexicographically sorted strings:")
+for word in words:
+    print(word)
+```
 # Pattern Searching
 
 ## What is Pattern Searching?
@@ -1274,6 +1910,7 @@ Pattern searching is the process of finding a specific sequence of characters, k
 The naive pattern searching algorithm checks for the pattern at every possible position in the text.
 
 #### C++ Code for Naive Pattern Searching
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -1304,8 +1941,55 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    public static void naivePatternSearch(String text, String pattern) {
+        int textLen = text.length();
+        int patternLen = pattern.length();
+
+        for (int i = 0; i <= textLen - patternLen; i++) {
+            int j;
+            for (j = 0; j < patternLen; j++) {
+                if (text.charAt(i + j) != pattern.charAt(j)) {
+                    break;
+                }
+            }
+            if (j == patternLen) {
+                System.out.println("Pattern found at index " + i);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String text = "AABAACAADAABAAABAA";
+        String pattern = "AABA";
+        naivePatternSearch(text, pattern);
+    }
+}
+```
+#### Python
+```python
+def naive_pattern_search(text, pattern):
+    text_len = len(text)
+    pattern_len = len(pattern)
+
+    for i in range(text_len - pattern_len + 1):
+        j = 0
+        while j < pattern_len:
+            if text[i + j] != pattern[j]:
+                break
+            j += 1
+        if j == pattern_len:
+            print("Pattern found at index", i)
+
+text = "AABAACAADAABAAABAA"
+pattern = "AABA"
+naive_pattern_search(text, pattern)
+```
 2. ### Knuth-Morris-Pratt (KMP) Algorithm
 The KMP algorithm improves the naive algorithm by avoiding redundant comparisons. It preprocesses the pattern to create a longest prefix suffix (LPS) array to skip characters.
+#### C++
 ```cpp
 #include <iostream>
 #include <vector>
@@ -1367,8 +2051,110 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void computeLPSArray(String pattern, int[] lps) {
+        int length = 0;
+        lps[0] = 0;
+        int i = 1;
+        while (i < pattern.length()) {
+            if (pattern.charAt(i) == pattern.charAt(length)) {
+                length++;
+                lps[i] = length;
+                i++;
+            } else {
+                if (length != 0) {
+                    length = lps[length - 1];
+                } else {
+                    lps[i] = 0;
+                    i++;
+                }
+            }
+        }
+    }
+
+    public static void KMPSearch(String text, String pattern) {
+        int textLen = text.length();
+        int patternLen = pattern.length();
+        int[] lps = new int[patternLen];
+
+        computeLPSArray(pattern, lps);
+
+        int i = 0, j = 0;
+        while (i < textLen) {
+            if (pattern.charAt(j) == text.charAt(i)) {
+                i++;
+                j++;
+            }
+            if (j == patternLen) {
+                System.out.println("Pattern found at index " + (i - j));
+                j = lps[j - 1];
+            } else if (i < textLen && pattern.charAt(j) != text.charAt(i)) {
+                if (j != 0) {
+                    j = lps[j - 1];
+                } else {
+                    i++;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String text = "AABAACAADAABAAABAA";
+        String pattern = "AABA";
+        KMPSearch(text, pattern);
+    }
+}
+```
+#### Python
+```python
+def compute_lps_array(pattern):
+    length = 0
+    lps = [0] * len(pattern)
+    i = 1
+    while i < len(pattern):
+        if pattern[i] == pattern[length]:
+            length += 1
+            lps[i] = length
+            i += 1
+        else:
+            if length != 0:
+                length = lps[length - 1]
+            else:
+                lps[i] = 0
+                i += 1
+    return lps
+
+def kmp_search(text, pattern):
+    text_len = len(text)
+    pattern_len = len(pattern)
+    lps = compute_lps_array(pattern)
+
+    i, j = 0, 0
+    while i < text_len:
+        if pattern[j] == text[i]:
+            i += 1
+            j += 1
+        if j == pattern_len:
+            print("Pattern found at index", i - j)
+            j = lps[j - 1]
+        elif i < text_len and pattern[j] != text[i]:
+            if j != 0:
+                j = lps[j - 1]
+            else:
+                i += 1
+
+text = "AABAACAADAABAAABAA"
+pattern = "AABA"
+kmp_search(text, pattern)
+```
 3. ### Rabin-Karp Algorithm
 The Rabin-Karp algorithm uses hashing to find any one of a set of pattern strings in a text. It compares the hash value of the pattern with the hash values of substrings of the text.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -1422,8 +2208,93 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+public class Main {
+    static final int d = 256;
+    static final int q = 101;
+
+    static void RabinKarpSearch(String text, String pattern) {
+        int textLen = text.length();
+        int patternLen = pattern.length();
+        int i, j;
+        int patternHash = 0;
+        int textHash = 0;
+        int h = 1;
+
+        for (i = 0; i < patternLen - 1; i++) {
+            h = (h * d) % q;
+        }
+
+        for (i = 0; i < patternLen; i++) {
+            patternHash = (d * patternHash + pattern.charAt(i)) % q;
+            textHash = (d * textHash + text.charAt(i)) % q;
+        }
+
+        for (i = 0; i <= textLen - patternLen; i++) {
+            if (patternHash == textHash) {
+                for (j = 0; j < patternLen; j++) {
+                    if (text.charAt(i + j) != pattern.charAt(j)) {
+                        break;
+                    }
+                }
+                if (j == patternLen) {
+                    System.out.println("Pattern found at index " + i);
+                }
+            }
+            if (i < textLen - patternLen) {
+                textHash = (d * (textHash - text.charAt(i) * h) + text.charAt(i + patternLen)) % q;
+                if (textHash < 0) {
+                    textHash = (textHash + q);
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String text = "AABAACAADAABAAABAA";
+        String pattern = "AABA";
+        RabinKarpSearch(text, pattern);
+    }
+}
+```
+#### Python
+```python
+def RabinKarpSearch(text, pattern):
+    textLen = len(text)
+    patternLen = len(pattern)
+    d = 256
+    q = 101
+    patternHash = 0
+    textHash = 0
+    h = 1
+
+    for i in range(patternLen - 1):
+        h = (h * d) % q
+
+    for i in range(patternLen):
+        patternHash = (d * patternHash + ord(pattern[i])) % q
+        textHash = (d * textHash + ord(text[i])) % q
+
+    for i in range(textLen - patternLen + 1):
+        if patternHash == textHash:
+            for j in range(patternLen):
+                if text[i + j] != pattern[j]:
+                    break
+            if j == patternLen - 1:
+                print("Pattern found at index", i)
+        if i < textLen - patternLen:
+            textHash = (d * (textHash - ord(text[i]) * h) + ord(text[i + patternLen])) % q
+            if textHash < 0:
+                textHash = textHash + q
+
+text = "AABAACAADAABAAABAA"
+pattern = "AABA"
+RabinKarpSearch(text, pattern)
+```
 4. ### Boyer-Moore Algorithm
 The Boyer-Moore algorithm preprocesses the pattern and uses two heuristic methods - the bad character heuristic and the good suffix heuristic - to skip sections of the text.
+#### C++
 ```cpp
 #include <iostream>
 #include <string>
@@ -1471,4 +2342,77 @@ int main() {
     BoyerMooreSearch(text, pattern);
     return 0;
 }
+```
+#### Java
+```java
+import java.util.Arrays;
+
+public class Main {
+    static final int NO_OF_CHARS = 256;
+
+    static void badCharHeuristic(String str, int size, int[] badChar) {
+        Arrays.fill(badChar, -1);
+        for (int i = 0; i < size; i++) {
+            badChar[str.charAt(i)] = i;
+        }
+    }
+
+    static void BoyerMooreSearch(String text, String pattern) {
+        int textLen = text.length();
+        int patternLen = pattern.length();
+        int[] badChar = new int[NO_OF_CHARS];
+
+        badCharHeuristic(pattern, patternLen, badChar);
+
+        int shift = 0;
+        while (shift <= (textLen - patternLen)) {
+            int j = patternLen - 1;
+
+            while (j >= 0 && pattern.charAt(j) == text.charAt(shift + j)) {
+                j--;
+            }
+            if (j < 0) {
+                System.out.println("Pattern found at index " + shift);
+                shift += (shift + patternLen < textLen) ? patternLen - badChar[text.charAt(shift + patternLen)] : 1;
+            } else {
+                shift += Math.max(1, j - badChar[text.charAt(shift + j)]);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        String text = "AABAACAADAABAAABAA";
+        String pattern = "AABA";
+        BoyerMooreSearch(text, pattern);
+    }
+}
+```
+#### Python
+```python
+NO_OF_CHARS = 256
+
+def badCharHeuristic(string, size):
+    badChar = [-1] * NO_OF_CHARS
+    for i in range(size):
+        badChar[ord(string[i])] = i
+    return badChar
+
+def BoyerMooreSearch(text, pattern):
+    textLen = len(text)
+    patternLen = len(pattern)
+    badChar = badCharHeuristic(pattern, patternLen)
+    shift = 0
+    while shift <= (textLen - patternLen):
+        j = patternLen - 1
+        while j >= 0 and pattern[j] == text[shift + j]:
+            j -= 1
+        if j < 0:
+            print("Pattern found at index", shift)
+            shift += patternLen - badChar[ord(text[shift + patternLen])] if (shift + patternLen < textLen) else 1
+        else:
+            shift += max(1, j - badChar[ord(text[shift + j])])
+
+text = "AABAACAADAABAAABAA"
+pattern = "AABA"
+BoyerMooreSearch(text, pattern)
 ```
