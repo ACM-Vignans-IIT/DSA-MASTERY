@@ -26,7 +26,7 @@ A queue is a linear data structure that follows the First In, First Out (FIFO) p
 A queue can be represented using arrays, linked lists, or dynamic data structures in various programming languages. The most common methods involve using arrays or linked lists.
 
 ## Array Implementation of Queue
-### C++ Code for Array-based Queue
+#### C++
 ```cpp
 #include <iostream>
 #include <stdexcept>
@@ -114,7 +114,141 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.NoSuchElementException;
+
+public class Queue {
+    private int[] arr;
+    private int front;
+    private int rear;
+    private int capacity;
+    private int count;
+
+    public Queue(int size) {
+        arr = new int[size];
+        capacity = size;
+        front = 0;
+        rear = -1;
+        count = 0;
+    }
+
+    public void enqueue(int x) {
+        if (isFull()) {
+            throw new IllegalStateException("Queue Overflow");
+        }
+        rear = (rear + 1) % capacity;
+        arr[rear] = x;
+        count++;
+    }
+
+    public int dequeue() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        int x = arr[front];
+        front = (front + 1) % capacity;
+        count--;
+        return x;
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return arr[front];
+    }
+
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
+    public boolean isFull() {
+        return count == capacity;
+    }
+
+    public int size() {
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Queue queue = new Queue(5);
+
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+
+        System.out.println("Front element is: " + queue.peek());
+        System.out.println("Queue size is: " + queue.size());
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        if (queue.isEmpty()) {
+            System.out.println("Queue is empty");
+        }
+    }
+}
+```
+#### Python
+```python
+class Queue:
+    def __init__(self, size):
+        self.arr = [0] * size
+        self.front = 0
+        self.rear = -1
+        self.capacity = size
+        self.count = 0
+
+    def enqueue(self, x):
+        if self.isFull():
+            raise Exception("Queue Overflow")
+        self.rear = (self.rear + 1) % self.capacity
+        self.arr[self.rear] = x
+        self.count += 1
+
+    def dequeue(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        x = self.arr[self.front]
+        self.front = (self.front + 1) % self.capacity
+        self.count -= 1
+        return x
+
+    def peek(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.arr[self.front]
+
+    def isEmpty(self):
+        return self.count == 0
+
+    def isFull(self):
+        return self.count == self.capacity
+
+    def size(self):
+        return self.count
+
+if __name__ == "__main__":
+    queue = Queue(5)
+
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+
+    print("Front element is:", queue.peek())
+    print("Queue size is:", queue.size())
+
+    queue.dequeue()
+    queue.dequeue()
+    queue.dequeue()
+
+    if queue.isEmpty():
+        print("Queue is empty")
+```
 ## Linked List Implementation of Queue
+#### C++
 ```cpp
 #include <iostream>
 #include <stdexcept>
@@ -209,6 +343,148 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.NoSuchElementException;
+
+public class Node {
+    public int data;
+    public Node next;
+}
+
+public class Queue {
+    private Node front;
+    private Node rear;
+    private int count;
+
+    public Queue() {
+        front = rear = null;
+        count = 0;
+    }
+
+    public void enqueue(int x) {
+        Node temp = new Node();
+        temp.data = x;
+        temp.next = null;
+        if (isEmpty()) {
+            front = rear = temp;
+        } else {
+            rear.next = temp;
+            rear = temp;
+        }
+        count++;
+    }
+
+    public int dequeue() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        Node temp = front;
+        front = front.next;
+        int popped = temp.data;
+        temp = null;
+        count--;
+        if (front == null) {
+            rear = null;
+        }
+        return popped;
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return front.data;
+    }
+
+    public boolean isEmpty() {
+        return front == null;
+    }
+
+    public int size() {
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Queue queue = new Queue();
+
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+
+        System.out.println("Front element is: " + queue.peek());
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        if (queue.isEmpty()) {
+            System.out.println("Queue is empty");
+        }
+    }
+}
+```
+#### Python
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class Queue:
+    def __init__(self):
+        self.front = None
+        self.rear = None
+        self.count = 0
+
+    def enqueue(self, x):
+        temp = Node(x)
+        if self.isEmpty():
+            self.front = self.rear = temp
+        else:
+            self.rear.next = temp
+            self.rear = temp
+        self.count += 1
+
+    def dequeue(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        temp = self.front
+        self.front = self.front.next
+        popped = temp.data
+        temp = None
+        self.count -= 1
+        if self.front == None:
+            self.rear = None
+        return popped
+
+    def peek(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.front.data
+
+    def isEmpty(self):
+        return self.front == None
+
+    def size(self):
+        return self.count
+
+if __name__ == "__main__":
+    queue = Queue()
+
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+
+    print("Front element is:", queue.peek())
+
+    queue.dequeue()
+    queue.dequeue()
+    queue.dequeue()
+
+    if queue.isEmpty():
+        print("Queue is empty")
+```
 # Types of Queues
 
 ## Overview
@@ -222,7 +498,7 @@ A simple queue is the basic form of a queue where elements are added at the rear
 ### 2. Circular Queue
 In a circular queue, the last position is connected back to the first position to make a circle. It overcomes the limitation of the simple queue where space is wasted when elements are dequeued.
 
-#### C++ Code for Circular Queue
+#### C++
 ```cpp
 #include <iostream>
 #include <stdexcept>
@@ -310,8 +586,142 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.NoSuchElementException;
+
+public class CircularQueue {
+    private int[] arr;
+    private int front;
+    private int rear;
+    private int capacity;
+    private int count;
+
+    public CircularQueue(int size) {
+        arr = new int[size];
+        capacity = size;
+        front = 0;
+        rear = -1;
+        count = 0;
+    }
+
+    public void enqueue(int x) {
+        if (isFull()) {
+            throw new RuntimeException("Queue Overflow");
+        }
+        rear = (rear + 1) % capacity;
+        arr[rear] = x;
+        count++;
+    }
+
+    public int dequeue() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        int x = arr[front];
+        front = (front + 1) % capacity;
+        count--;
+        return x;
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return arr[front];
+    }
+
+    public boolean isEmpty() {
+        return count == 0;
+    }
+
+    public boolean isFull() {
+        return count == capacity;
+    }
+
+    public int size() {
+        return count;
+    }
+
+    public static void main(String[] args) {
+        CircularQueue queue = new CircularQueue(5);
+
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+
+        System.out.println("Front element is: " + queue.peek());
+        System.out.println("Queue size is: " + queue.size());
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        if (queue.isEmpty()) {
+            System.out.println("Queue is empty");
+        }
+    }
+}
+```
+#### Python
+```python
+class CircularQueue:
+    def __init__(self, size):
+        self.arr = [0] * size
+        self.front = 0
+        self.rear = -1
+        self.capacity = size
+        self.count = 0
+
+    def enqueue(self, x):
+        if self.isFull():
+            raise Exception("Queue Overflow")
+        self.rear = (self.rear + 1) % self.capacity
+        self.arr[self.rear] = x
+        self.count += 1
+
+    def dequeue(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        x = self.arr[self.front]
+        self.front = (self.front + 1) % self.capacity
+        self.count -= 1
+        return x
+
+    def peek(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.arr[self.front]
+
+    def isEmpty(self):
+        return self.count == 0
+
+    def isFull(self):
+        return self.count == self.capacity
+
+    def size(self):
+        return self.count
+
+if __name__ == "__main__":
+    queue = CircularQueue(5)
+
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+
+    print("Front element is:", queue.peek())
+    print("Queue size is:", queue.size())
+
+    queue.dequeue()
+    queue.dequeue()
+    queue.dequeue()
+
+    if queue.isEmpty():
+        print("Queue is empty")
+```
 ## 3. Priority Queue
 A priority queue is a special type of queue in which each element is associated with a priority. Elements with higher priority are dequeued before elements with lower priority.
+#### C++
 ```cpp
 #include <iostream>
 #include <queue>
@@ -373,8 +783,111 @@ int main() {
     return 0;
 }
 ```
+#### Java
+```java
+import java.util.PriorityQueue;
+import java.util.NoSuchElementException;
+
+public class PriorityQueueExample {
+    private PriorityQueue<Integer> pq;
+
+    public PriorityQueueExample() {
+        pq = new PriorityQueue<>();
+    }
+
+    public void enqueue(int x) {
+        pq.offer(x);
+    }
+
+    public int dequeue() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return pq.poll();
+    }
+
+    public int peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return pq.peek();
+    }
+
+    public boolean isEmpty() {
+        return pq.isEmpty();
+    }
+
+    public int size() {
+        return pq.size();
+    }
+
+    public static void main(String[] args) {
+        PriorityQueueExample queue = new PriorityQueueExample();
+
+        queue.enqueue(10);
+        queue.enqueue(30);
+        queue.enqueue(20);
+
+        System.out.println("Top element is: " + queue.peek());
+        System.out.println("Queue size is: " + queue.size());
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+
+        if (queue.isEmpty()) {
+            System.out.println("Queue is empty");
+        }
+    }
+}
+```
+#### Python
+```python
+import queue
+
+class PriorityQueue:
+    def __init__(self):
+        self.pq = queue.PriorityQueue()
+
+    def enqueue(self, x):
+        self.pq.put(x)
+
+    def dequeue(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.pq.get()
+
+    def peek(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.pq.queue[0]
+
+    def isEmpty(self):
+        return self.pq.empty()
+
+    def size(self):
+        return self.pq.qsize()
+
+if __name__ == "__main__":
+    queue = PriorityQueue()
+
+    queue.enqueue(10)
+    queue.enqueue(30)
+    queue.enqueue(20)
+
+    print("Top element is:", queue.peek())
+    print("Queue size is:", queue.size())
+
+    queue.dequeue()
+    queue.dequeue()
+    queue.dequeue()
+
+    if queue.isEmpty():
+        print("Queue is empty")
+```
 ## 4. Double-ended Queue (Deque)
 A deque is a type of queue in which elements can be added or removed from both ends (front and rear). It combines the properties of stacks and queues.
+#### C++
 ```cpp
 #include <iostream>
 #include <deque>
@@ -455,5 +968,141 @@ int main() {
     }
 
     return 0;
+```
+#### Java
+```java
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.NoSuchElementException;
+
+public class DequeExample {
+    private Deque<Integer> dq;
+
+    public DequeExample() {
+        dq = new LinkedList<>();
+    }
+
+    public void enqueueFront(int x) {
+        dq.offerFirst(x);
+    }
+
+    public void enqueueRear(int x) {
+        dq.offerLast(x);
+    }
+
+    public int dequeueFront() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return dq.pollFirst();
+    }
+
+    public int dequeueRear() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return dq.pollLast();
+    }
+
+    public int peekFront() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return dq.peekFirst();
+    }
+
+    public int peekRear() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue Underflow");
+        }
+        return dq.peekLast();
+    }
+
+    public boolean isEmpty() {
+        return dq.isEmpty();
+    }
+
+    public int size() {
+        return dq.size();
+    }
+
+    public static void main(String[] args) {
+        DequeExample deque = new DequeExample();
+
+        deque.enqueueRear(1);
+        deque.enqueueRear(2);
+        deque.enqueueFront(3);
+
+        System.out.println("Front element is: " + deque.peekFront());
+        System.out.println("Rear element is: " + deque.peekRear());
+        System.out.println("Deque size is: " + deque.size());
+
+        deque.dequeueFront();
+        deque.dequeueRear();
+        deque.dequeueFront();
+
+        if (deque.isEmpty()) {
+            System.out.println("Deque is empty");
+        }
+    }
+}
+```
+#### Python
+```python
+from collections import deque
+
+class Deque:
+    def __init__(self):
+        self.dq = deque()
+
+    def enqueueFront(self, x):
+        self.dq.appendleft(x)
+
+    def enqueueRear(self, x):
+        self.dq.append(x)
+
+    def dequeueFront(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.dq.popleft()
+
+    def dequeueRear(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.dq.pop()
+
+    def peekFront(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.dq[0]
+
+    def peekRear(self):
+        if self.isEmpty():
+            raise Exception("Queue Underflow")
+        return self.dq[-1]
+
+    def isEmpty(self):
+        return len(self.dq) == 0
+
+    def size(self):
+        return len(self.dq)
+
+if __name__ == "__main__":
+    deque = Deque()
+
+    deque.enqueueRear(1)
+    deque.enqueueRear(2)
+    deque.enqueueFront(3)
+
+    print("Front element is:", deque.peekFront())
+    print("Rear element is:", deque.peekRear())
+    print("Deque size is:", deque.size())
+
+    deque.dequeueFront()
+    deque.dequeueRear()
+    deque.dequeueFront()
+
+    if deque.isEmpty():
+        print("Deque is empty")
 }
 ```
