@@ -6,8 +6,8 @@
    <a href="./CONTRIBUTING.md"><img alt="Repo Contributors" title="repo contributors" target="_blank" src="https://img.shields.io/github/contributors/ACM-Vignans-IIT/DSA-MASTERY?style=for-the-badge&color=50CCA0&logo=github"></a>
    <a href="https://github.com/ACM-Vignans-IIT/DSA-MASTERY"><img alt="Repo Stars" title="repo stars" target="_blank" src="https://img.shields.io/github/stars/ACM-Vignans-IIT/DSA-MASTERY?style=for-the-badge&color=50CCA0&logo=github"></a>
    <a href="https://github.com/ACM-Vignans-IIT/DSA-MASTERY"><img alt="Repo Forks" title="repo forks" target="_blank" src="https://img.shields.io/github/forks/ACM-Vignans-IIT/DSA-MASTERY?style=for-the-badge&color=50CCA0&logo=github"></a>
-<!--    <a href="https://github.com/ACM-Vignans-IIT/DSA-MASTERY"><img height="28px" alt="Site Up" title="site up" target="_blank" src="https://napkin-examples.npkn.net/site-status-badge/"></a> -->
-   <a href="https://github.com/ACM-Vignans-IIT/DSA-MASTERY"><img height="28px" alt="Site Down" title="site down" target="_blank" src="https://napkin-examples.npkn.net/site-status-badge/400"></a>
+   <a href="https://acm-vignans-iit-gamma.vercel.app/articles/dsa-mastery" target="_blank" ><img height="28px" alt="Site Up" title="site up" target="_blank" src="https://napkin-examples.npkn.net/site-status-badge/"></a> 
+  <!--     <a href="https://github.com/ACM-Vignans-IIT/DSA-MASTERY"><img height="28px" alt="Site Down" title="site down" target="_blank" src="https://napkin-examples.npkn.net/site-status-badge/400"></a> -->
 </div>
 
 </br>
